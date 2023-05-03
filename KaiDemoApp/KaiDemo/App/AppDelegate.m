@@ -22,9 +22,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+
 //    [NSThread sleepForTimeInterval:1.0];
-    
+
 //    switchController = [[DemoSwitchController alloc] init];
 //    switchController.view.clipsToBounds = YES;
 //

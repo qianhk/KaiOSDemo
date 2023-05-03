@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DemoEntryViewController : UIViewController
+@interface DemoEntryViewController : UITableViewController
 
 @end
 

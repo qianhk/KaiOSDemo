@@ -7,6 +7,7 @@
 
 #import "DemoSwitchTabBarController.h"
 #import "DemoEntryViewController.h"
+#import "DemoNavigationController.h"
 #import "KaiDemo-Swift.h"
 
 @interface DemoSwitchTabBarController () {
@@ -20,7 +21,7 @@
 //    UITabBarItem* tabBarItem4;
 //    UITabBarItem* tabBarItem5;
 //    UITabBarItem* tabBarItem6;
-    
+
 //    DemoEntryViewController *entryViewTabVc;
 //    AboutViewController* aboutTabVc;
 }
@@ -31,11 +32,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
-
+    
+    
     DemoEntryViewController *entryViewTabVc = [DemoEntryViewController new];
-    entryViewTabVc.tabBarItem.image = [UIImage imageNamed:@"TabItemList"];
-    entryViewTabVc.tabBarItem.title = @"Demo";
+    DemoNavigationController *navVc1 = [[DemoNavigationController alloc] initWithRootViewController:entryViewTabVc];
+    navVc1.tabBarItem.image = [UIImage imageNamed:@"TabItemList"];
+    navVc1.tabBarItem.title = @"Demo";
     
     AboutViewController *aboutTabDevice = [AboutViewController new];
     aboutTabDevice.tabBarItem.image = [UIImage imageNamed:@"TabItemDevice"];
@@ -45,8 +47,8 @@
     AboutViewController *aboutTabVc = [AboutViewController new];
     aboutTabVc.tabBarItem.image = [UIImage imageNamed:@"TabItemInfo"];
     aboutTabVc.tabBarItem.title = @"关于";
-
-    self.viewControllers = @[entryViewTabVc, aboutTabDevice, aboutTabVc];
+    
+    self.viewControllers = @[navVc1, aboutTabDevice, aboutTabVc];
 }
 
 /*

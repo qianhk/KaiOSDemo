@@ -18,6 +18,14 @@
     // Do any additional setup after loading the view.
 }
 
+// 注意：这是个正确的写法
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if (self.viewControllers.count > 0) {
+        viewController.hidesBottomBarWhenPushed = YES;
+    }
+    [super pushViewController:viewController animated:animated];
+}
+
 /*
 #pragma mark - Navigation
 
@@ -27,5 +35,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+//- (BOOL)shouldAutorotate {
+//    return self.topViewController.shouldAutorotate;
+//}
+//
+//- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+//    return self.topViewController.supportedInterfaceOrientations;
+//}
+//
+//- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+//    return self.topViewController.preferredInterfaceOrientationForPresentation;
+//}
 
 @end

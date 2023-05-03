@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19DD343A9086409294B9C90F /* BaseTestListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DD3A22B4C7F3E1C8179FE8 /* BaseTestListViewController.m */; };
+		19DD36B6084CE2B29AFA111E /* KaiNormalObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DD33A9D5ECC3F5C8A9043C /* KaiNormalObj.m */; };
+		19DD3CF6BEF8D1419B9B276D /* ZaTestListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DD3EA777DE4D94367FDCCE /* ZaTestListViewController.m */; };
+		19DD3E0F7169E16F6976C045 /* KaiObjProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DD30725BDD0BE8B531743C /* KaiObjProxy.m */; };
 		2A33203F2A023E3B0001CCA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A33203E2A023E3B0001CCA0 /* AppDelegate.m */; };
 		2A3320422A023E3B0001CCA0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3320412A023E3B0001CCA0 /* SceneDelegate.m */; };
 		2A3320452A023E3B0001CCA0 /* PlaceholderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3320442A023E3B0001CCA0 /* PlaceholderViewController.m */; };
@@ -42,6 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19DD30725BDD0BE8B531743C /* KaiObjProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KaiObjProxy.m; sourceTree = "<group>"; };
+		19DD33A9D5ECC3F5C8A9043C /* KaiNormalObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KaiNormalObj.m; sourceTree = "<group>"; };
+		19DD35F8B889B110F8CC3D56 /* KaiNormalObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KaiNormalObj.h; sourceTree = "<group>"; };
+		19DD38C56BB46EDC1310FA04 /* BaseTestListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTestListViewController.h; sourceTree = "<group>"; };
+		19DD3A22B4C7F3E1C8179FE8 /* BaseTestListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTestListViewController.m; sourceTree = "<group>"; };
+		19DD3EA777DE4D94367FDCCE /* ZaTestListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZaTestListViewController.m; sourceTree = "<group>"; };
+		19DD3F1D32FB5682EEBE0198 /* ZaTestListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZaTestListViewController.h; sourceTree = "<group>"; };
+		19DD3F57A2E67AC16CBB97C2 /* KaiObjProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KaiObjProxy.h; sourceTree = "<group>"; };
 		2A33203A2A023E3B0001CCA0 /* KaiDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaiDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A33203D2A023E3B0001CCA0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2A33203E2A023E3B0001CCA0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -118,6 +130,7 @@
 		2A33203C2A023E3B0001CCA0 /* KaiDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2A9A73D82A0295B900E9C47A /* Za */,
 				2AF464DF2A02542F00A7441B /* DemoEntryViewController.h */,
 				2AF464E02A02542F00A7441B /* DemoEntryViewController.m */,
 				2A3320752A02410A0001CCA0 /* Resources */,
@@ -178,6 +191,8 @@
 		2A3320742A0240D80001CCA0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				19DD38C56BB46EDC1310FA04 /* BaseTestListViewController.h */,
+				19DD3A22B4C7F3E1C8179FE8 /* BaseTestListViewController.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -189,6 +204,19 @@
 				2A3320492A023E3C0001CCA0 /* MainAssets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		2A9A73D82A0295B900E9C47A /* Za */ = {
+			isa = PBXGroup;
+			children = (
+				19DD3F1D32FB5682EEBE0198 /* ZaTestListViewController.h */,
+				19DD3EA777DE4D94367FDCCE /* ZaTestListViewController.m */,
+				19DD30725BDD0BE8B531743C /* KaiObjProxy.m */,
+				19DD3F57A2E67AC16CBB97C2 /* KaiObjProxy.h */,
+				19DD33A9D5ECC3F5C8A9043C /* KaiNormalObj.m */,
+				19DD35F8B889B110F8CC3D56 /* KaiNormalObj.h */,
+			);
+			path = Za;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +359,10 @@
 				2A3320422A023E3B0001CCA0 /* SceneDelegate.m in Sources */,
 				2A9A73D52A0257B400E9C47A /* AboutViewController.swift in Sources */,
 				2A9A73D22A02573400E9C47A /* DemoSwitchTabBarController.m in Sources */,
+				19DD343A9086409294B9C90F /* BaseTestListViewController.m in Sources */,
+				19DD3CF6BEF8D1419B9B276D /* ZaTestListViewController.m in Sources */,
+				19DD3E0F7169E16F6976C045 /* KaiObjProxy.m in Sources */,
+				19DD36B6084CE2B29AFA111E /* KaiNormalObj.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
