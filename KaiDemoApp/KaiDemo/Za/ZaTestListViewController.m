@@ -13,6 +13,16 @@
     [self addOneTest:@"Proxy Cat Dog" selector:@selector(proxyCatDog)];
     [self addOneTest:@"无强引用也内存泄露" selector:@selector(leakWithoutStrongRef)];
     [self addOneTest:@"demo input view" selector:@selector(demoInputView)];
+    [self addOneTest:@"Toast" selector:@selector(testToast)];
+    [self addOneTest:@"Long Toast" selector:@selector(testLongToast)];
+}
+
+- (void)testToast {
+//    [DemoToast toast:@"Haha Toast"];
+}
+
+- (void)testLongToast {
+//    [DemoToast toast:@"Haha Toast Long Time" duration:3];
 }
 
 - (void)demoInputView {

@@ -23,6 +23,9 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"凯Demo";
+    
+    self.clearsSelectionOnViewWillAppear = NO;
+    
     UITableView *const tableView = self.tableView;
     tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     tableView.separatorColor = [UIColor orangeColor];
@@ -35,7 +38,7 @@
     _entryArray = @[
             @{@"Name": @"杂七杂八测试", @"Vc": @"ZaTestListViewController"},
             @{@"Name": @"GCD Test", @"Vc": @"GCDTestViewController"},
-            @{@"Name": @"Demo Test List3", @"Vc": @"XxxxVC3"},
+            @{@"Name": @"JavaScriptCore", @"Vc": @"JSCoreTestViewController"},
             @{@"Name": @"Demo Test List4", @"Vc": @"XxxxVC4"},
             @{@"Name": @"Demo Test List5", @"Vc": @"XxxxVC5"},
     ];
@@ -65,8 +68,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 //    NSLog(@"didSelectRowAtIndexPath row=%ld %.2f", (long) indexPath.row, UITableViewAutomaticDimension);
-        [tableView deselectRowAtIndexPath:indexPath animated:NO];
-//
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+
     NSDictionary *item = _entryArray[indexPath.row];
     NSNumber *type = item[@"type"];
     if (type == nil) {

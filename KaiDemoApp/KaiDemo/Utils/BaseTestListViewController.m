@@ -15,6 +15,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
+    
+    self.clearsSelectionOnViewWillAppear = NO;
+    
 //    self.title = @"凯XXXDemo";
     UITableView *tableView = self.tableView;
     tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
