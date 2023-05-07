@@ -10,6 +10,7 @@
 #import "NSObject+DemoRuntimeInvoke.h"
 #import "DemoToast.h"
 #import "DemoScreenUtils.h"
+#import "DemoJSON.h"
 
 @implementation ZaTestListViewController
 
@@ -23,6 +24,12 @@
 }
 
 - (void)testToast {
+    NSDictionary *testDic = @{@"key1": @"value1", @"key2": @222};
+    NSArray *testArray = @[@"abc", @123];
+    NSString *str1 = [testDic demo_jsonString];
+    NSString *str2 = [testArray demo_jsonString];
+    id resultDic = [str1 demo_objectFromJsonString];
+    id resultArray = [str2 demo_objectFromJsonString];
     Demo_onMainThread(^{
         [DemoToast toast:@"Haha Default Toast"];
     });

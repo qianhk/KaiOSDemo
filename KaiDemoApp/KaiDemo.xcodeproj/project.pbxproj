@@ -34,6 +34,7 @@
 		2A9A73F02A07BDC900E9C47A /* DemoToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A73EF2A07BDC900E9C47A /* DemoToast.m */; };
 		2A9A73F62A07DAB300E9C47A /* DemoScreenUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A73F52A07DAB300E9C47A /* DemoScreenUtils.m */; };
 		2A9A73F92A07DC9600E9C47A /* DemoWindowUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A73F82A07DC9600E9C47A /* DemoWindowUtils.m */; };
+		2A9A73FC2A07E4E500E9C47A /* DemoJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A73FB2A07E4E500E9C47A /* DemoJSON.m */; };
 		2AF464E12A02542F00A7441B /* DemoEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF464E02A02542F00A7441B /* DemoEntryViewController.m */; };
 		2AF464E42A02548C00A7441B /* DemoNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF464E32A02548C00A7441B /* DemoNavigationController.m */; };
 /* End PBXBuildFile section */
@@ -106,6 +107,8 @@
 		2A9A73F52A07DAB300E9C47A /* DemoScreenUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoScreenUtils.m; sourceTree = "<group>"; };
 		2A9A73F72A07DC9600E9C47A /* DemoWindowUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoWindowUtils.h; sourceTree = "<group>"; };
 		2A9A73F82A07DC9600E9C47A /* DemoWindowUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoWindowUtils.m; sourceTree = "<group>"; };
+		2A9A73FA2A07E4E500E9C47A /* DemoJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoJSON.h; sourceTree = "<group>"; };
+		2A9A73FB2A07E4E500E9C47A /* DemoJSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoJSON.m; sourceTree = "<group>"; };
 		2AF464DF2A02542F00A7441B /* DemoEntryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoEntryViewController.h; path = KaiDemo/DemoEntryViewController.h; sourceTree = SOURCE_ROOT; };
 		2AF464E02A02542F00A7441B /* DemoEntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DemoEntryViewController.m; path = KaiDemo/DemoEntryViewController.m; sourceTree = SOURCE_ROOT; };
 		2AF464E22A02548C00A7441B /* DemoNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoNavigationController.h; sourceTree = "<group>"; };
@@ -238,6 +241,8 @@
 				2A9A73F52A07DAB300E9C47A /* DemoScreenUtils.m */,
 				2A9A73F72A07DC9600E9C47A /* DemoWindowUtils.h */,
 				2A9A73F82A07DC9600E9C47A /* DemoWindowUtils.m */,
+				2A9A73FA2A07E4E500E9C47A /* DemoJSON.h */,
+				2A9A73FB2A07E4E500E9C47A /* DemoJSON.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -426,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A9A73FC2A07E4E500E9C47A /* DemoJSON.m in Sources */,
 				2A9A73E02A076D1800E9C47A /* GCDTestViewController.m in Sources */,
 				2AF464E42A02548C00A7441B /* DemoNavigationController.m in Sources */,
 				2AF464E12A02542F00A7441B /* DemoEntryViewController.m in Sources */,
