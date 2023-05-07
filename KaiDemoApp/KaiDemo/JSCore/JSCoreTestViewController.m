@@ -12,13 +12,14 @@
 @interface JSCoreTestViewController ()
 @property (nonatomic, strong) JSVirtualMachine *jsMachine;
 @property (nonatomic, strong) JSContext *jsContext;
+@property (nonatomic, assign) BOOL loadedJs;
 @end
 
 @implementation JSCoreTestViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.loadedJs = NO;
     self.jsMachine = [[JSVirtualMachine alloc] init];
     self.jsContext = [[JSContext alloc] initWithVirtualMachine:self.jsMachine];
     self.jsContext.name = @"KaiDemoCustomJsContext";
@@ -42,14 +43,17 @@
 }
 
 - (void)invokeFromJsFile {
-    NSString *commonJsPath = [[NSBundle mainBundle] pathForResource:@"testCommon" ofType:@"js"];
-    NSString *jsContent = [NSString stringWithContentsOfFile:commonJsPath encoding:NSUTF8StringEncoding error:nil];
-    if (jsContent == nil && jsContent.length <= 0) {
-        NSLog(@"lookKai no jsContent, %@", jsContent);
-        return;
+    if (!_loadedJs) {
+        NSString *commonJsPath = [[NSBundle mainBundle] pathForResource:@"testCommon" ofType:@"js"];
+        NSString *jsContent = [NSString stringWithContentsOfFile:commonJsPath encoding:NSUTF8StringEncoding error:nil];
+        if (jsContent == nil && jsContent.length <= 0) {
+            NSLog(@"lookKai no jsContent, %@", jsContent);
+            return;
+        }
+        NSLog(@"lookKai jsContent, len=%ld", jsContent.length);
+        [self.jsContext evaluateScript:jsContent withSourceURL:[NSURL URLWithString:@"testCommon.js"]];
+        _loadedJs = YES;
     }
-    NSLog(@"lookKai jsContent, len=%ld", jsContent.length);
-    [self.jsContext evaluateScript:jsContent withSourceURL:[NSURL URLWithString:@"testCommon.js"]];
     JSValue *sumFun = [self.jsContext objectForKeyedSubscript:@"kaiTestSum"];
     JSValue *sumResultValue = [sumFun callWithArguments:@[@4, @2, @3]];
     NSLog(@"lookKai sumFun=%@ obj=%@ sumResultValue=%@ toXxx=%@ type=%@", sumFun, NSStringFromClass([sumFun.toObject class]),

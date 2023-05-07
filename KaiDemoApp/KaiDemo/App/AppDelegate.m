@@ -7,9 +7,10 @@
 
 #import "AppDelegate.h"
 #import "DemoSwitchTabBarController.h"
+#import "DemoBizInitialize.h"
 
 @interface AppDelegate () {
-//    DemoSwitchController* switchController;
+
 }
 
 @property (nonatomic, strong) UIWindow *window;
@@ -31,6 +32,8 @@
 //    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 //    self.window.rootViewController = switchController;
 //    [self.window makeKeyAndVisible];
+    
+    [DemoBizInitialize launch];
     
     return YES;
 }

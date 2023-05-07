@@ -5,6 +5,9 @@
 #import "ZaTestListViewController.h"
 #import "KaiNormalObj.h"
 #import "KaiObjProxy.h"
+#import "DemoSynchronize.h"
+#import "NSObject+DemoDelayRunLoop.h"
+#import "NSObject+DemoRuntimeInvoke.h"
 
 @implementation ZaTestListViewController
 
@@ -18,14 +21,20 @@
 }
 
 - (void)testToast {
+    Demo_onMainThread(^{
 //    [DemoToast toast:@"Haha Toast"];
+    });
 }
 
 - (void)testLongToast {
+    [NSObject demo_doBlockAtNextRunloop:^{
 //    [DemoToast toast:@"Haha Toast Long Time" duration:3];
+    }];
 }
 
 - (void)demoInputView {
+    Cat *cat = [[Cat alloc] init];
+    [cat invoke:@"eat:" arguments:@[@"猫食"]];
 //        DemoTextInputView *inputView = [DemoTextInputView new];
 //        [inputView showkeyboardWithType:NO parentView:self.view];
 }

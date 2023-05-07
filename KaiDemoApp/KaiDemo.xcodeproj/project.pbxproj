@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19DD324285E40DB9BA37BD5D /* NSObject+DemoDelayRunLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DD3483295A2FA7A89D4C72 /* NSObject+DemoDelayRunLoop.m */; };
 		19DD343A9086409294B9C90F /* BaseTestListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DD3A22B4C7F3E1C8179FE8 /* BaseTestListViewController.m */; };
+		19DD367B0620DC30EBAA053F /* NSObject+DemoRuntimeInvoke.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DD3758C7B6CE8F757B4DCD /* NSObject+DemoRuntimeInvoke.m */; };
 		19DD36B6084CE2B29AFA111E /* KaiNormalObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DD33A9D5ECC3F5C8A9043C /* KaiNormalObj.m */; };
 		19DD3CF6BEF8D1419B9B276D /* ZaTestListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DD3EA777DE4D94367FDCCE /* ZaTestListViewController.m */; };
 		19DD3D285FF5B8495E27640A /* DemoJsConsoleProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DD356E33FC3912CF5AF489 /* DemoJsConsoleProtocol.m */; };
@@ -28,6 +30,7 @@
 		2A9A73E02A076D1800E9C47A /* GCDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A73DF2A076D1800E9C47A /* GCDTestViewController.m */; };
 		2A9A73E42A07A83300E9C47A /* JSCoreTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A73E32A07A83300E9C47A /* JSCoreTestViewController.m */; };
 		2A9A73E62A07AB6700E9C47A /* testCommon.js in Resources */ = {isa = PBXBuildFile; fileRef = 2A9A73E52A07AB5E00E9C47A /* testCommon.js */; };
+		2A9A73EA2A07B34E00E9C47A /* DemoBizInitialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A73E92A07B34E00E9C47A /* DemoBizInitialize.m */; };
 		2AF464E12A02542F00A7441B /* DemoEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF464E02A02542F00A7441B /* DemoEntryViewController.m */; };
 		2AF464E42A02548C00A7441B /* DemoNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF464E32A02548C00A7441B /* DemoNavigationController.m */; };
 /* End PBXBuildFile section */
@@ -51,9 +54,13 @@
 
 /* Begin PBXFileReference section */
 		19DD30725BDD0BE8B531743C /* KaiObjProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KaiObjProxy.m; sourceTree = "<group>"; };
+		19DD30BEA377EC391ECB8A3C /* NSObject+DemoRuntimeInvoke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DemoRuntimeInvoke.h"; sourceTree = "<group>"; };
+		19DD32F871169F94DEBD4755 /* NSObject+DemoDelayRunLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DemoDelayRunLoop.h"; sourceTree = "<group>"; };
 		19DD33A9D5ECC3F5C8A9043C /* KaiNormalObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KaiNormalObj.m; sourceTree = "<group>"; };
+		19DD3483295A2FA7A89D4C72 /* NSObject+DemoDelayRunLoop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DemoDelayRunLoop.m"; sourceTree = "<group>"; };
 		19DD356E33FC3912CF5AF489 /* DemoJsConsoleProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoJsConsoleProtocol.m; sourceTree = "<group>"; };
 		19DD35F8B889B110F8CC3D56 /* KaiNormalObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KaiNormalObj.h; sourceTree = "<group>"; };
+		19DD3758C7B6CE8F757B4DCD /* NSObject+DemoRuntimeInvoke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DemoRuntimeInvoke.m"; sourceTree = "<group>"; };
 		19DD38C56BB46EDC1310FA04 /* BaseTestListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTestListViewController.h; sourceTree = "<group>"; };
 		19DD397BD208465F42C35725 /* DemoJsConsoleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoJsConsoleProtocol.h; sourceTree = "<group>"; };
 		19DD3A22B4C7F3E1C8179FE8 /* BaseTestListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTestListViewController.m; sourceTree = "<group>"; };
@@ -87,6 +94,9 @@
 		2A9A73E22A07A83300E9C47A /* JSCoreTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSCoreTestViewController.h; sourceTree = "<group>"; };
 		2A9A73E32A07A83300E9C47A /* JSCoreTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSCoreTestViewController.m; sourceTree = "<group>"; };
 		2A9A73E52A07AB5E00E9C47A /* testCommon.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = testCommon.js; sourceTree = "<group>"; };
+		2A9A73E82A07B34E00E9C47A /* DemoBizInitialize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoBizInitialize.h; sourceTree = "<group>"; };
+		2A9A73E92A07B34E00E9C47A /* DemoBizInitialize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoBizInitialize.m; sourceTree = "<group>"; };
+		2A9A73EB2A07B77700E9C47A /* DemoSynchronize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoSynchronize.h; sourceTree = "<group>"; };
 		2AF464DF2A02542F00A7441B /* DemoEntryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoEntryViewController.h; path = KaiDemo/DemoEntryViewController.h; sourceTree = SOURCE_ROOT; };
 		2AF464E02A02542F00A7441B /* DemoEntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DemoEntryViewController.m; path = KaiDemo/DemoEntryViewController.m; sourceTree = SOURCE_ROOT; };
 		2AF464E22A02548C00A7441B /* DemoNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoNavigationController.h; sourceTree = "<group>"; };
@@ -197,6 +207,8 @@
 		2A3320732A0240CE0001CCA0 /* Initialize */ = {
 			isa = PBXGroup;
 			children = (
+				2A9A73E82A07B34E00E9C47A /* DemoBizInitialize.h */,
+				2A9A73E92A07B34E00E9C47A /* DemoBizInitialize.m */,
 			);
 			path = Initialize;
 			sourceTree = "<group>";
@@ -206,6 +218,11 @@
 			children = (
 				19DD38C56BB46EDC1310FA04 /* BaseTestListViewController.h */,
 				19DD3A22B4C7F3E1C8179FE8 /* BaseTestListViewController.m */,
+				2A9A73EB2A07B77700E9C47A /* DemoSynchronize.h */,
+				19DD32F871169F94DEBD4755 /* NSObject+DemoDelayRunLoop.h */,
+				19DD3483295A2FA7A89D4C72 /* NSObject+DemoDelayRunLoop.m */,
+				19DD30BEA377EC391ECB8A3C /* NSObject+DemoRuntimeInvoke.h */,
+				19DD3758C7B6CE8F757B4DCD /* NSObject+DemoRuntimeInvoke.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -404,11 +421,14 @@
 				2A3320422A023E3B0001CCA0 /* SceneDelegate.m in Sources */,
 				2A9A73D52A0257B400E9C47A /* AboutViewController.swift in Sources */,
 				2A9A73D22A02573400E9C47A /* DemoSwitchTabBarController.m in Sources */,
+				2A9A73EA2A07B34E00E9C47A /* DemoBizInitialize.m in Sources */,
 				19DD343A9086409294B9C90F /* BaseTestListViewController.m in Sources */,
 				19DD3CF6BEF8D1419B9B276D /* ZaTestListViewController.m in Sources */,
 				19DD3E0F7169E16F6976C045 /* KaiObjProxy.m in Sources */,
 				19DD36B6084CE2B29AFA111E /* KaiNormalObj.m in Sources */,
 				19DD3D285FF5B8495E27640A /* DemoJsConsoleProtocol.m in Sources */,
+				19DD324285E40DB9BA37BD5D /* NSObject+DemoDelayRunLoop.m in Sources */,
+				19DD367B0620DC30EBAA053F /* NSObject+DemoRuntimeInvoke.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
