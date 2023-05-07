@@ -6,7 +6,9 @@
 
 @interface KaiObjProxy ()
 
-@property (nonatomic, strong) NSObject *obj;
+// 使用weak的话还可以用来解决NSTimer循环引用问题
+// https://www.jianshu.com/p/fca3bdfca42f
+@property (nonatomic, weak) NSObject *obj;
 
 @end
 
@@ -16,7 +18,7 @@
 }
 
 //2.有了方法签名之后就会调用方法实现
-- (void)forfardInvocation:(NSInvocation *)invocation {
+- (void)forwardInvocation:(NSInvocation *)invocation {
     if (self.obj) {
 //拦截方法的执行者为复制的对象
         [invocation setTarget:self.obj];
@@ -36,7 +38,7 @@
     if ([self.obj methodSignatureForSelector:sel]) {
         signature = [self.obj methodSignatureForSelector:sel];
     } else {
-        signature = [super methodSignatureForSelector:sel];
+//        signature = [super methodSignatureForSelector:sel];
     }
     return signature;
 }

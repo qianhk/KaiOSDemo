@@ -130,6 +130,7 @@
 		2A33203C2A023E3B0001CCA0 /* KaiDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2A9A73D92A029CC800E9C47A /* Swift */,
 				2A9A73D82A0295B900E9C47A /* Za */,
 				2AF464DF2A02542F00A7441B /* DemoEntryViewController.h */,
 				2AF464E02A02542F00A7441B /* DemoEntryViewController.m */,
@@ -161,6 +162,10 @@
 		2A3320722A02407C0001CCA0 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				2A9A73D02A02573400E9C47A /* DemoSwitchTabBarController.h */,
+				2A9A73D12A02573400E9C47A /* DemoSwitchTabBarController.m */,
+				2AF464E22A02548C00A7441B /* DemoNavigationController.h */,
+				2AF464E32A02548C00A7441B /* DemoNavigationController.m */,
 				2A33203D2A023E3B0001CCA0 /* AppDelegate.h */,
 				2A33203E2A023E3B0001CCA0 /* AppDelegate.m */,
 				2A3320402A023E3B0001CCA0 /* SceneDelegate.h */,
@@ -171,11 +176,6 @@
 				2A33204B2A023E3C0001CCA0 /* LaunchScreen.storyboard */,
 				2A33204E2A023E3C0001CCA0 /* Info.plist */,
 				2A33204F2A023E3C0001CCA0 /* main.m */,
-				2AF464E22A02548C00A7441B /* DemoNavigationController.h */,
-				2AF464E32A02548C00A7441B /* DemoNavigationController.m */,
-				2A9A73D02A02573400E9C47A /* DemoSwitchTabBarController.h */,
-				2A9A73D12A02573400E9C47A /* DemoSwitchTabBarController.m */,
-				2A9A73D42A0257B400E9C47A /* AboutViewController.swift */,
 				2A9A73D32A0257B300E9C47A /* KaiDemo-Bridging-Header.h */,
 			);
 			path = App;
@@ -211,12 +211,20 @@
 			children = (
 				19DD3F1D32FB5682EEBE0198 /* ZaTestListViewController.h */,
 				19DD3EA777DE4D94367FDCCE /* ZaTestListViewController.m */,
-				19DD30725BDD0BE8B531743C /* KaiObjProxy.m */,
 				19DD3F57A2E67AC16CBB97C2 /* KaiObjProxy.h */,
-				19DD33A9D5ECC3F5C8A9043C /* KaiNormalObj.m */,
+				19DD30725BDD0BE8B531743C /* KaiObjProxy.m */,
 				19DD35F8B889B110F8CC3D56 /* KaiNormalObj.h */,
+				19DD33A9D5ECC3F5C8A9043C /* KaiNormalObj.m */,
 			);
 			path = Za;
+			sourceTree = "<group>";
+		};
+		2A9A73D92A029CC800E9C47A /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				2A9A73D42A0257B400E9C47A /* AboutViewController.swift */,
+			);
+			path = Swift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

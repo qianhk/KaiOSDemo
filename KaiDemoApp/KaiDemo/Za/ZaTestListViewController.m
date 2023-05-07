@@ -28,19 +28,22 @@
     KaiObjProxy *proxy = [KaiObjProxy alloc];
     [proxy transformObjc:cat];
     [proxy performSelector:@selector(eat:) withObject:@"猫之食物2"];
+//    [proxy performSelector:@selector(eat2:) withObject:@"猫之食物2_2"];
     [proxy transformObjc:dog];
     [proxy performSelector:@selector(drink:) withObject:@"狗之饮料2"];
-    KaiNormalObj *normal0bj = [KaiNormalObj new];
-    NSLog(@"%@", [normal0bj catEat:@"猫食"]);
-    NSLog(@"%@", [normal0bj dogDrink:@"狗水"]);
+    KaiNormalObj *normalObj = [KaiNormalObj new];
+    NSLog(@"%@", [normalObj catEat:@"猫食"]);
+    NSLog(@"%@", [normalObj dogDrink:@"狗水"]);
 }
 
 - (void)leakWithoutStrongRef {
+    KaiNormalObj *obj1;
     @try {
-        KaiNormalObj *obj = [KaiNormalObj new];
-        [@[] objectAtIndex:1]; //由于异常，作用域尾部对objrelease的操作跳过了，使得引用计数始终为1
+//        obj1 = [KaiNormalObj new];
+        KaiNormalObj *obj2 = [KaiNormalObj new];
+        [@[] objectAtIndex:1]; //由于异常，作用域尾部对obj2 release的操作跳过了，使得引用计数始终为1
     } @catch (NSException *exception) {
-        NSLog(@"lookkai catch leakWithoutStrongRef exception");
+        NSLog(@"lookkai catch leakWithoutStrongRef exception: %@", exception);
     } @finally {
     
     }

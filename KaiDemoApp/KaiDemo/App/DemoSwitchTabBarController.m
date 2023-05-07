@@ -35,9 +35,14 @@
     
     
     DemoEntryViewController *entryViewTabVc = [DemoEntryViewController new];
-    DemoNavigationController *navVc1 = [[DemoNavigationController alloc] initWithRootViewController:entryViewTabVc];
-    navVc1.tabBarItem.image = [UIImage imageNamed:@"TabItemList"];
-    navVc1.tabBarItem.title = @"Demo";
+    DemoNavigationController *navEntry = [[DemoNavigationController alloc] initWithRootViewController:entryViewTabVc];
+    navEntry.tabBarItem.image = [UIImage imageNamed:@"TabItemList"];
+    navEntry.tabBarItem.title = @"Demo";
+    
+    AboutViewController *swiftTabVc = [AboutViewController new];
+    DemoNavigationController *navSwift = [[DemoNavigationController alloc] initWithRootViewController:swiftTabVc];
+    navSwift.tabBarItem.image = [UIImage imageNamed:@"TabItemSwift"];
+    navSwift.tabBarItem.title = @"Swift";
     
     AboutViewController *aboutTabDevice = [AboutViewController new];
     aboutTabDevice.tabBarItem.image = [UIImage imageNamed:@"TabItemDevice"];
@@ -48,7 +53,7 @@
     aboutTabVc.tabBarItem.image = [UIImage imageNamed:@"TabItemInfo"];
     aboutTabVc.tabBarItem.title = @"关于";
     
-    self.viewControllers = @[navVc1, aboutTabDevice, aboutTabVc];
+    self.viewControllers = @[navEntry, navSwift, aboutTabDevice, aboutTabVc];
 }
 
 /*
