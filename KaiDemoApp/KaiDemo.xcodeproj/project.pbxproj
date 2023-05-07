@@ -24,6 +24,7 @@
 		2A9A73D22A02573400E9C47A /* DemoSwitchTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A73D12A02573400E9C47A /* DemoSwitchTabBarController.m */; };
 		2A9A73D52A0257B400E9C47A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A73D42A0257B400E9C47A /* AboutViewController.swift */; };
 		2A9A73D72A026DD800E9C47A /* DemoLaunchBkg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A9A73D62A026DD800E9C47A /* DemoLaunchBkg.jpg */; };
+		2A9A73E02A076D1800E9C47A /* GCDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A73DF2A076D1800E9C47A /* GCDTestViewController.m */; };
 		2AF464E12A02542F00A7441B /* DemoEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF464E02A02542F00A7441B /* DemoEntryViewController.m */; };
 		2AF464E42A02548C00A7441B /* DemoNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF464E32A02548C00A7441B /* DemoNavigationController.m */; };
 /* End PBXBuildFile section */
@@ -76,6 +77,8 @@
 		2A9A73D32A0257B300E9C47A /* KaiDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KaiDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		2A9A73D42A0257B400E9C47A /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		2A9A73D62A026DD800E9C47A /* DemoLaunchBkg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DemoLaunchBkg.jpg; sourceTree = "<group>"; };
+		2A9A73DE2A076D1800E9C47A /* GCDTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDTestViewController.h; sourceTree = "<group>"; };
+		2A9A73DF2A076D1800E9C47A /* GCDTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDTestViewController.m; sourceTree = "<group>"; };
 		2AF464DF2A02542F00A7441B /* DemoEntryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoEntryViewController.h; path = KaiDemo/DemoEntryViewController.h; sourceTree = SOURCE_ROOT; };
 		2AF464E02A02542F00A7441B /* DemoEntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DemoEntryViewController.m; path = KaiDemo/DemoEntryViewController.m; sourceTree = SOURCE_ROOT; };
 		2AF464E22A02548C00A7441B /* DemoNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoNavigationController.h; sourceTree = "<group>"; };
@@ -130,6 +133,7 @@
 		2A33203C2A023E3B0001CCA0 /* KaiDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2A9A73DA2A076CB100E9C47A /* GCD */,
 				2A9A73D92A029CC800E9C47A /* Swift */,
 				2A9A73D82A0295B900E9C47A /* Za */,
 				2AF464DF2A02542F00A7441B /* DemoEntryViewController.h */,
@@ -225,6 +229,15 @@
 				2A9A73D42A0257B400E9C47A /* AboutViewController.swift */,
 			);
 			path = Swift;
+			sourceTree = "<group>";
+		};
+		2A9A73DA2A076CB100E9C47A /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				2A9A73DE2A076D1800E9C47A /* GCDTestViewController.h */,
+				2A9A73DF2A076D1800E9C47A /* GCDTestViewController.m */,
+			);
+			path = GCD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A9A73E02A076D1800E9C47A /* GCDTestViewController.m in Sources */,
 				2AF464E42A02548C00A7441B /* DemoNavigationController.m in Sources */,
 				2AF464E12A02542F00A7441B /* DemoEntryViewController.m in Sources */,
 				2A3320452A023E3B0001CCA0 /* PlaceholderViewController.m in Sources */,

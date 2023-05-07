@@ -34,7 +34,7 @@
     
     _entryArray = @[
             @{@"Name": @"杂七杂八测试", @"Vc": @"ZaTestListViewController"},
-            @{@"Name": @"Demo Test List2", @"Vc": @"XxxxVC2"},
+            @{@"Name": @"GCD Test", @"Vc": @"GCDTestViewController"},
             @{@"Name": @"Demo Test List3", @"Vc": @"XxxxVC3"},
             @{@"Name": @"Demo Test List4", @"Vc": @"XxxxVC4"},
             @{@"Name": @"Demo Test List5", @"Vc": @"XxxxVC5"},
