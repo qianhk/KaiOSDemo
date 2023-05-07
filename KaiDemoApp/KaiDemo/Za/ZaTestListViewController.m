@@ -8,6 +8,8 @@
 #import "DemoSynchronize.h"
 #import "NSObject+DemoDelayRunLoop.h"
 #import "NSObject+DemoRuntimeInvoke.h"
+#import "DemoToast.h"
+#import "DemoScreenUtils.h"
 
 @implementation ZaTestListViewController
 
@@ -22,13 +24,17 @@
 
 - (void)testToast {
     Demo_onMainThread(^{
-//    [DemoToast toast:@"Haha Toast"];
+        [DemoToast toast:@"Haha Default Toast"];
     });
 }
 
 - (void)testLongToast {
     [NSObject demo_doBlockAtNextRunloop:^{
-//    [DemoToast toast:@"Haha Toast Long Time" duration:3];
+        NSString *msg = [NSString stringWithFormat:@"screen notchHeight=%.0f fixSize=%@ size=%@"
+                , [DemoScreenUtils getIPhoneNotchHeight]
+                , NSStringFromCGSize([DemoScreenUtils mainScreenFixedSize])
+                , NSStringFromCGSize([DemoScreenUtils mainScreenSize])];
+        [DemoToast toast:msg duration:3];
     }];
 }
 
