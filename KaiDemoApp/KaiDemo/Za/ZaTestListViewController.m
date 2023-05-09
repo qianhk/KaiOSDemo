@@ -11,6 +11,7 @@
 #import "DemoToast.h"
 #import "DemoScreenUtils.h"
 #import "DemoJSON.h"
+#import "DemoTextInputView.h"
 
 @implementation ZaTestListViewController
 
@@ -48,8 +49,11 @@
 - (void)demoInputView {
     Cat *cat = [[Cat alloc] init];
     [cat invoke:@"eat:" arguments:@[@"猫食"]];
-//        DemoTextInputView *inputView = [DemoTextInputView new];
-//        [inputView showkeyboardWithType:NO parentView:self.view];
+    DemoTextInputView *inputView = [DemoTextInputView new];
+    inputView.completion = ^(NSString *content) {
+        NSLog(@"lookKai keyboard input len=%ld: %@", content.length, content);
+    };
+    [inputView showKeyboardWithParentView:self.view];
 }
 
 - (void)proxyCatDog {
