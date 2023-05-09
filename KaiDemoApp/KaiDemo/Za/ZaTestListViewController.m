@@ -12,6 +12,7 @@
 #import "DemoScreenUtils.h"
 #import "DemoJSON.h"
 #import "DemoTextInputView.h"
+#import "KaiDemo-Swift.h"
 
 @implementation ZaTestListViewController
 
@@ -22,6 +23,7 @@
     [self addOneTest:@"demo input view" selector:@selector(demoInputView)];
     [self addOneTest:@"Toast" selector:@selector(testToast)];
     [self addOneTest:@"Long Toast" selector:@selector(testLongToast)];
+    [self addOneTest:@"调用Swift语法测试" selector:@selector(invokeSwiftSyntax)];
 }
 
 - (void)testToast {
@@ -79,10 +81,20 @@
         KaiNormalObj *obj2 = [KaiNormalObj new];
         [@[] objectAtIndex:1]; //由于异常，作用域尾部对obj2 release的操作跳过了，使得引用计数始终为1
     } @catch (NSException *exception) {
-        NSLog(@"lookkai catch leakWithoutStrongRef exception: %@", exception);
+        NSLog(@"lookKai catch leakWithoutStrongRef exception: %@", exception);
     } @finally {
     
     }
+}
+
+- (void)invokeSwiftSyntax {
+    TestSwiftSyntax *swift = [TestSwiftSyntax new];
+    swift.name = @"OcName";
+    swift.other = @"OcOther";
+    NSLog(@"lookKai in .m testSwiftSyntax1 = %@", swift.simpleDescription);
+    swift.nextYearAge = 10;
+    NSLog(@"lookKai in .m testSwiftSyntax2 = %@", swift.simpleDescription);
+    [swift demoEntryFunction];
 }
 
 @end
