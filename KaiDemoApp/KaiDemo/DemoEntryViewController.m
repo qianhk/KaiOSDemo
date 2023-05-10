@@ -39,7 +39,7 @@
             @{@"Name": @"杂七杂八测试", @"Vc": @"ZaTestListViewController"},
             @{@"Name": @"GCD Test", @"Vc": @"GCDTestViewController"},
             @{@"Name": @"JavaScriptCore", @"Vc": @"JSCoreTestViewController"},
-            @{@"Name": @"Demo Test List4", @"Vc": @"XxxxVC4"},
+            @{@"Name": @"BMI Calc", @"Vc": @"_TtC7KaiDemo17BMIViewController"},
             @{@"Name": @"Demo Test List5", @"Vc": @"XxxxVC5"},
     ];
     [self performSelector:@selector(autoEnterPage) withObject:nil afterDelay:0.5];

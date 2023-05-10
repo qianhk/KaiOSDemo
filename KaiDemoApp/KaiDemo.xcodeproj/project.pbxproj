@@ -38,6 +38,8 @@
 		2A9A73FF2A0A646D00E9C47A /* DemoTextInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A73FE2A0A646D00E9C47A /* DemoTextInputView.m */; };
 		2A9A74022A0A8B1200E9C47A /* OCTestData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A74012A0A8B1200E9C47A /* OCTestData.m */; };
 		2A9A74042A0A8C5A00E9C47A /* TestSwiftSyntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A74032A0A8C5A00E9C47A /* TestSwiftSyntax.swift */; };
+		2A9A74062A0BB00700E9C47A /* BMIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A74052A0BB00600E9C47A /* BMIViewController.swift */; };
+		2A9A74092A0BB0C100E9C47A /* BMICalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A74082A0BB0C100E9C47A /* BMICalc.swift */; };
 		2AF464E12A02542F00A7441B /* DemoEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF464E02A02542F00A7441B /* DemoEntryViewController.m */; };
 		2AF464E42A02548C00A7441B /* DemoNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF464E32A02548C00A7441B /* DemoNavigationController.m */; };
 /* End PBXBuildFile section */
@@ -117,6 +119,8 @@
 		2A9A74002A0A8B1200E9C47A /* OCTestData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCTestData.h; sourceTree = "<group>"; };
 		2A9A74012A0A8B1200E9C47A /* OCTestData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCTestData.m; sourceTree = "<group>"; };
 		2A9A74032A0A8C5A00E9C47A /* TestSwiftSyntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSwiftSyntax.swift; sourceTree = "<group>"; };
+		2A9A74052A0BB00600E9C47A /* BMIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIViewController.swift; sourceTree = "<group>"; };
+		2A9A74082A0BB0C100E9C47A /* BMICalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMICalc.swift; sourceTree = "<group>"; };
 		2AF464DF2A02542F00A7441B /* DemoEntryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoEntryViewController.h; path = KaiDemo/DemoEntryViewController.h; sourceTree = SOURCE_ROOT; };
 		2AF464E02A02542F00A7441B /* DemoEntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DemoEntryViewController.m; path = KaiDemo/DemoEntryViewController.m; sourceTree = SOURCE_ROOT; };
 		2AF464E22A02548C00A7441B /* DemoNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoNavigationController.h; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 				2A9A73E12A07A74D00E9C47A /* JSCore */,
 				2A9A73DA2A076CB100E9C47A /* GCD */,
 				2A9A73D92A029CC800E9C47A /* Swift */,
+				2A9A74072A0BB07E00E9C47A /* SwiftSyntax */,
 				2A9A73D82A0295B900E9C47A /* Za */,
 				2AF464DF2A02542F00A7441B /* DemoEntryViewController.h */,
 				2AF464E02A02542F00A7441B /* DemoEntryViewController.m */,
@@ -285,7 +290,8 @@
 			isa = PBXGroup;
 			children = (
 				2A9A73D42A0257B400E9C47A /* AboutViewController.swift */,
-				2A9A74032A0A8C5A00E9C47A /* TestSwiftSyntax.swift */,
+				2A9A74082A0BB0C100E9C47A /* BMICalc.swift */,
+				2A9A74052A0BB00600E9C47A /* BMIViewController.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -309,6 +315,14 @@
 				19DD356E33FC3912CF5AF489 /* DemoJsConsoleProtocol.m */,
 			);
 			path = JSCore;
+			sourceTree = "<group>";
+		};
+		2A9A74072A0BB07E00E9C47A /* SwiftSyntax */ = {
+			isa = PBXGroup;
+			children = (
+				2A9A74032A0A8C5A00E9C47A /* TestSwiftSyntax.swift */,
+			);
+			path = SwiftSyntax;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,8 +481,10 @@
 				2A9A74022A0A8B1200E9C47A /* OCTestData.m in Sources */,
 				2A9A73F92A07DC9600E9C47A /* DemoWindowUtils.m in Sources */,
 				19DD324285E40DB9BA37BD5D /* NSObject+DemoDelayRunLoop.m in Sources */,
+				2A9A74092A0BB0C100E9C47A /* BMICalc.swift in Sources */,
 				2A9A73F02A07BDC900E9C47A /* DemoToast.m in Sources */,
 				19DD367B0620DC30EBAA053F /* NSObject+DemoRuntimeInvoke.m in Sources */,
+				2A9A74062A0BB00700E9C47A /* BMIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
