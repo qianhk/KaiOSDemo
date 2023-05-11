@@ -95,6 +95,7 @@
     swift.nextYearAge = 10;
     NSLog(@"lookKai in .m testSwiftSyntax2 = %@", swift.simpleDescription);
     [swift demoEntryFunction];
+    [ControlFlowEntry entry];
 }
 
 @end

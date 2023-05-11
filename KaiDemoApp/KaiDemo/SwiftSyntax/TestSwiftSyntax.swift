@@ -48,13 +48,15 @@ public class TestSwiftSyntax : NSObject {
     
     @objc
     func demoEntryFunction() {
-        
+        print("\n----------   in Swift Syntax Test    ----------")
+        let anInt = 98765
+        let sub = anInt[1]
         var ocData = OCTestData()
         let arrayTest = ocData.arrayTest
         ocData.name = "KaiKai"
         ocData.index = 123
         ocData.arrayTest = ["V1", 666];
-        print("lookKai inSwift ocDat1a=\(ocData.description)")
+        print("lookKai inSwift ocDat1a=\(ocData.description) sub=\(sub)")
         ocData.otherStr = "otherStrInSwift"
 //        ocData.otherDic = {"k1": "v1", "k2": "888"}
         print("lookKai inSwift ocData2=\(ocData)")

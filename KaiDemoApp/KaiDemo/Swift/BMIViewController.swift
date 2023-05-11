@@ -112,7 +112,7 @@ class BMIViewController : UIViewController {
         ])
         
         let inputBtn: UIButton = UIButton.init()
-        inputBtn.setTitle("Demo InputView", for: .normal)
+        inputBtn.setTitle(" Demo InputView ", for: .normal)
         inputBtn.setTitleColor(.black, for: .normal)
         inputBtn.backgroundColor = .lightGray
         view.addSubview(inputBtn)
@@ -120,8 +120,21 @@ class BMIViewController : UIViewController {
         inputBtn.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             inputBtn.topAnchor.constraint(equalTo: _resultLabel.bottomAnchor, constant: 20)
-            , inputBtn.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+            , inputBtn.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor)
             , inputBtn.heightAnchor.constraint(equalToConstant: 40)
+        ])
+        
+        let syntaxBtn: UIButton = UIButton.init()
+        syntaxBtn.setTitle(" Swift Syntax ", for: .normal)
+        syntaxBtn.setTitleColor(.black, for: .normal)
+        syntaxBtn.backgroundColor = .lightGray
+        view.addSubview(syntaxBtn)
+        syntaxBtn.addTarget(self, action: #selector(onClickSyntaxButton(_:)), for: .touchUpInside)
+        syntaxBtn.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            syntaxBtn.topAnchor.constraint(equalTo: inputBtn.topAnchor)
+            , syntaxBtn.leadingAnchor.constraint(equalTo: inputBtn.trailingAnchor, constant: 20)
+            , syntaxBtn.heightAnchor.constraint(equalTo: inputBtn.heightAnchor)
         ])
     }
     
@@ -162,6 +175,11 @@ class BMIViewController : UIViewController {
             print("lookKai inputView callback2, content=\($0)")
         }
         inputView.showKeyboard(withParentView: view)
+    }
+    
+    @objc func onClickSyntaxButton(_ sender: UIButton) {
+        TestSwiftSyntax().demoEntryFunction()
+        ControlFlowEntry.entry()
     }
     
     @objc func onClickCalcButton1(_ sender: UIButton) {
