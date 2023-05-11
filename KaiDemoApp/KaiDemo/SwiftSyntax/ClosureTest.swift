@@ -50,7 +50,7 @@ private class SomeClass {
         let a = A()
         a.someFunctionWithEscapingClosure { [weak self] in
             //实测加weak随即释放，不加直到async执行完成才释放
-            print("inEscapingClosure x=\(self?.x ?? -1)");
+            print("\nClosureTest.swift inEscapingClosure x=\(self?.x ?? -1)");
             self?.x = 100
         } //Reference to property 'x' in closure requires explicit use of 'self' to make capture semantics explicit
         a.someFunctionWithNonescapingClosure {

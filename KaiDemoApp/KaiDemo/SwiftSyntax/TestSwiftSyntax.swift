@@ -56,7 +56,7 @@ public class TestSwiftSyntax : NSObject {
         ocData.name = "KaiKai"
         ocData.index = 123
         ocData.arrayTest = ["V1", 666];
-        print("lookKai inSwift ocDat1a=\(ocData.description) sub=\(sub)")
+        print("lookKai inSwift ocData1=\(ocData.description) sub=\(sub)")
         ocData.otherStr = "otherStrInSwift"
 //        ocData.otherDic = {"k1": "v1", "k2": "888"}
         print("lookKai inSwift ocData2=\(ocData)")

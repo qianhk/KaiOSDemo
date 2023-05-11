@@ -59,7 +59,7 @@ struct Person : Stname, Stage {
 }
 
 func show(celebrator: Stname & Stage) {
-    print("V(celebrator.name) is \(celebrator.age) years old")
+    print("\(celebrator.name) is \(celebrator.age) years old")
 }
 
 protocol AProtocol {

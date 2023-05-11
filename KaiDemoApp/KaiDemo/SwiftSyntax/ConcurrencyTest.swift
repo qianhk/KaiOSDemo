@@ -45,7 +45,14 @@ class ConcurrencyTest : NSObject {
             }
             print("lookKai end Task \(task)")
 //          let result = wait task.value
-//          print("lookKai end Task2: \(result)")
+            
+            print("lookKai before Task2 ")
+            Task {
+                print("lookKai before Task2 in task")
+                let _result = await connectUser(to: "primary")
+                print("lookKai end Task2 in task, result=", _result)
+            }
+            print("lookKai end Task2")
         } else {
             // Fallback on earlier versions
         }
