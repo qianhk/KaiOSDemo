@@ -13,6 +13,9 @@ private func fetchUserID(from server: String) async -> Int {
     if server == "primary" {
         return 97
     }
+    
+    for char in server.unicodeScalars {
+    }
     return 501
 }
 
@@ -30,7 +33,7 @@ func connectUser(to server: String) async -> String {
     async let userID = fetchUserID(from: server)
     async let username = fetchUsername(from: server)
     let greeting = await "Hello \(username), user ID \(userID)"
-    print("in ConcurrencyTest.swift \(greeting)")
+    print("in ConcurrencyTest.swift \(greeting) tid=\(Thread.current)")
     return greeting
 }
 
@@ -46,11 +49,16 @@ class ConcurrencyTest : NSObject {
             print("lookKai end Task \(task)")
 //          let result = wait task.value
             
-            print("lookKai before Task2 ")
+            print("lookKai before Task2, thread=", Thread.current)
             Task {
                 print("lookKai before Task2 in task")
                 let _result = await connectUser(to: "primary")
-                print("lookKai end Task2 in task, result=", _result)
+                print("lookKai end Task2 in task, result=", _result, Thread.current)
+                
+                // 如果无await 为何错误提示： Expression is 'async' but is not marked with 'await'
+                // 也许swift 5.x语法修改过了？
+                await ConcurrencyTest.afterTaskFlushUI()
+                await ConcurrencyTest().afterTaskFlushUI2()
             }
             print("lookKai end Task2")
         } else {
@@ -62,6 +70,15 @@ class ConcurrencyTest : NSObject {
 //        async let thirdPhoto = downloadPhoto(named: photoNames[2])
 //        let photos = await [firstPhoto, secondPhoto, thirdPhoto]
 //        show(photos)
+    }
     
+    @MainActor
+    static func afterTaskFlushUI() {
+        print("lookKai in ConcurrencyTest.swift  afterTaskFlushUI, thread=", Thread.current)
+    }
+    
+    @MainActor
+    func afterTaskFlushUI2() {
+        print("lookKai in ConcurrencyTest.swift  afterTaskFlushUI2, thread=", Thread.current)
     }
 }
