@@ -13,6 +13,7 @@
 #import "DemoJSON.h"
 #import "DemoTextInputView.h"
 #import "KaiDemo-Swift.h"
+#import "KaiPerson.h"
 
 @implementation ZaTestListViewController
 
@@ -24,6 +25,7 @@
     [self addOneTest:@"Toast" selector:@selector(testToast)];
     [self addOneTest:@"Long Toast" selector:@selector(testLongToast)];
     [self addOneTest:@"调用Swift语法测试" selector:@selector(invokeSwiftSyntax)];
+    [self addOneTest:@"method swizzle" selector:@selector(methodSwizzle)];
 }
 
 - (void)testToast {
@@ -70,6 +72,8 @@
     [proxy transformObjc:dog];
     [proxy performSelector:@selector(drink:) withObject:@"狗之饮料2"];
     KaiNormalObj *normalObj = [KaiNormalObj new];
+//    [proxy transformObjc:nil];
+//    [proxy performSelector:@selector(drink:) withObject:@"不存在obj了"];
     NSLog(@"%@", [normalObj catEat:@"猫食"]);
     NSLog(@"%@", [normalObj dogDrink:@"狗水"]);
 }
@@ -96,6 +100,19 @@
     NSLog(@"lookKai in .m testSwiftSyntax2 = %@", swift.simpleDescription);
     [swift demoEntryFunction];
     [ControlFlowEntry entry];
+}
+
+- (void)methodSwizzle {
+    NSString *tem = @"KaiHaha";
+    id pcls = [KaiStudent class];
+    void *pp = &pcls;
+    [(__bridge id)pp saySomething]; // 与文章不同，如果使用属性，那么此处crash，不使用属性就正常，毕竟并没有new实例
+    
+    KaiStudent *student = [KaiStudent new];
+    [student saySomething];
+    [student personInstanceMethod];
+    KaiPerson *person = [KaiPerson new];
+    [person personInstanceMethod];
 }
 
 @end

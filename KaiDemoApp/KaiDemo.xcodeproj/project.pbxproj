@@ -24,6 +24,8 @@
 		2A33205A2A023E3D0001CCA0 /* KaiDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3320592A023E3D0001CCA0 /* KaiDemoTests.m */; };
 		2A3320642A023E3D0001CCA0 /* KaiDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3320632A023E3D0001CCA0 /* KaiDemoUITests.m */; };
 		2A3320662A023E3D0001CCA0 /* KaiDemoUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3320652A023E3D0001CCA0 /* KaiDemoUITestsLaunchTests.m */; };
+		2A6643B32A26128C00DCFB26 /* KaiPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6643B22A26128C00DCFB26 /* KaiPerson.m */; };
+		2A6643B62A2613B600DCFB26 /* DemoRuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6643B52A2613B600DCFB26 /* DemoRuntimeUtils.m */; };
 		2A9A73D22A02573400E9C47A /* DemoSwitchTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A73D12A02573400E9C47A /* DemoSwitchTabBarController.m */; };
 		2A9A73D52A0257B400E9C47A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A73D42A0257B400E9C47A /* AboutViewController.swift */; };
 		2A9A73D72A026DD800E9C47A /* DemoLaunchBkg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A9A73D62A026DD800E9C47A /* DemoLaunchBkg.jpg */; };
@@ -102,6 +104,10 @@
 		2A33205F2A023E3D0001CCA0 /* KaiDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaiDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A3320632A023E3D0001CCA0 /* KaiDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KaiDemoUITests.m; sourceTree = "<group>"; };
 		2A3320652A023E3D0001CCA0 /* KaiDemoUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KaiDemoUITestsLaunchTests.m; sourceTree = "<group>"; };
+		2A6643B12A26128C00DCFB26 /* KaiPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KaiPerson.h; sourceTree = "<group>"; };
+		2A6643B22A26128C00DCFB26 /* KaiPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KaiPerson.m; sourceTree = "<group>"; };
+		2A6643B42A2613B600DCFB26 /* DemoRuntimeUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoRuntimeUtils.h; sourceTree = "<group>"; };
+		2A6643B52A2613B600DCFB26 /* DemoRuntimeUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoRuntimeUtils.m; sourceTree = "<group>"; };
 		2A9A73D02A02573400E9C47A /* DemoSwitchTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoSwitchTabBarController.h; sourceTree = "<group>"; };
 		2A9A73D12A02573400E9C47A /* DemoSwitchTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoSwitchTabBarController.m; sourceTree = "<group>"; };
 		2A9A73D32A0257B300E9C47A /* KaiDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KaiDemo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -276,6 +282,8 @@
 				2A9A73FB2A07E4E500E9C47A /* DemoJSON.m */,
 				2A9A73FD2A0A646D00E9C47A /* DemoTextInputView.h */,
 				2A9A73FE2A0A646D00E9C47A /* DemoTextInputView.m */,
+				2A6643B42A2613B600DCFB26 /* DemoRuntimeUtils.h */,
+				2A6643B52A2613B600DCFB26 /* DemoRuntimeUtils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -300,6 +308,8 @@
 				19DD33A9D5ECC3F5C8A9043C /* KaiNormalObj.m */,
 				2A9A74002A0A8B1200E9C47A /* OCTestData.h */,
 				2A9A74012A0A8B1200E9C47A /* OCTestData.m */,
+				2A6643B12A26128C00DCFB26 /* KaiPerson.h */,
+				2A6643B22A26128C00DCFB26 /* KaiPerson.m */,
 			);
 			path = Za;
 			sourceTree = "<group>";
@@ -498,6 +508,7 @@
 				2A9A74132A0BDF2200E9C47A /* ClosureTest.swift in Sources */,
 				2A9A73FF2A0A646D00E9C47A /* DemoTextInputView.m in Sources */,
 				2A9A740B2A0BD3CC00E9C47A /* IntExtension.swift in Sources */,
+				2A6643B62A2613B600DCFB26 /* DemoRuntimeUtils.m in Sources */,
 				2A9A741B2A0D202B00E9C47A /* TypeSelfTest.swift in Sources */,
 				2A9A73E42A07A83300E9C47A /* JSCoreTestViewController.m in Sources */,
 				2A3320422A023E3B0001CCA0 /* SceneDelegate.m in Sources */,
@@ -509,6 +520,7 @@
 				2A9A73EA2A07B34E00E9C47A /* DemoBizInitialize.m in Sources */,
 				2A9A740D2A0BD44800E9C47A /* ProtocolTest.swift in Sources */,
 				19DD343A9086409294B9C90F /* BaseTestListViewController.m in Sources */,
+				2A6643B32A26128C00DCFB26 /* KaiPerson.m in Sources */,
 				19DD3CF6BEF8D1419B9B276D /* ZaTestListViewController.m in Sources */,
 				19DD3E0F7169E16F6976C045 /* KaiObjProxy.m in Sources */,
 				19DD36B6084CE2B29AFA111E /* KaiNormalObj.m in Sources */,
