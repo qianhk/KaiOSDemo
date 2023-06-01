@@ -20,6 +20,11 @@
 
 - (void)saySomething {
     NSLog(@"KaiPerson.saySomething %s %@", __func__, @"self.name");
+//    NSLog(@"KaiPerson.saySomething %s %@", __func__, self.name);
+}
+
+- (void)otherMethod {
+    NSLog(@"KaiPerson.otherMethod %s", __func__);
 }
 
 @end
@@ -47,5 +52,8 @@
     NSLog(@"KaiPerson(Demo).kai_personInstanceMethod");
 }
 
+- (void)otherMethod {
+    NSLog(@"KaiPerson(Demo).otherMethod %s", __func__);
+}
 
 @end

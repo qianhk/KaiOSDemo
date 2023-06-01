@@ -106,13 +106,44 @@
     NSString *tem = @"KaiHaha";
     id pcls = [KaiStudent class];
     void *pp = &pcls;
-    [(__bridge id)pp saySomething]; // 与文章不同，如果使用属性，那么此处crash，不使用属性就正常，毕竟并没有new实例
+//    [(__bridge id)pp saySomething]; // 与文章不同，如果使用属性，那么此处crash，不使用属性就正常，毕竟并没有new实例
     
     KaiStudent *student = [KaiStudent new];
     [student saySomething];
+//    id pcls2 = student;
+//    void *pp2 = &pcls2;
+//    [(__bridge id)pp2 saySomething];
+    
     [student personInstanceMethod];
     KaiPerson *person = [KaiPerson new];
     [person personInstanceMethod];
+    
+    [student otherMethod];
+    [self callClassMethod:student];
 }
+
+// 分类重写原类方法时，如何调用原类方法
+// https://juejin.cn/post/6844903874768158727
+- (void)callClassMethod:(KaiStudent *)student {
+    u_int count;
+    Method *methods = class_copyMethodList([KaiPerson class], &count);
+    NSInteger index = 0;
+    
+    for (int i = 0; i < count; i++) {
+        SEL name = method_getName(methods[i]);
+        NSString *strName = [NSString stringWithCString:sel_getName(name) encoding:NSUTF8StringEncoding];
+
+        if ([strName isEqualToString:@"otherMethod"]) {
+            index = i;  // 先获取原类方法在方法列表中的索引
+            // 注意此处并没有break，而是继续找，因为原类方法在后面
+        }
+    }
+    
+    // 调用方法
+    SEL sel = method_getName(methods[index]);
+    IMP imp = method_getImplementation(methods[index]);
+    ((void (*)(id, SEL))imp)(student,sel);
+}
+
 
 @end

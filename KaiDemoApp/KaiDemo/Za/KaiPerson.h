@@ -20,9 +20,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)saySomething;
 
+- (void)otherMethod;
+
 @end
 
 @interface KaiStudent : KaiPerson
+
+@end
+
+@interface KaiStudent (Demo)
+
+- (void)otherMethod;
 
 @end
 
