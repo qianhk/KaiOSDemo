@@ -128,11 +128,20 @@ const NSNotificationName KaiTestNotificationName = @"KaiTestNotification";
 - (void)dispatch_barrier_test:(NSNumber *)sync {
     NSLog(@"lookKai dispatch_barrier sync=%@", sync);
     NSLog(@"main ———1--");
+    NSMutableDictionary *muDic = [NSMutableDictionary new];
+    __block NSDictionary *tmpDic = @{@"key1": @"value1"};
+    tmpDic = @{@"key2": @"value2"};
     dispatch_async(self.concurrentQueue, ^{
         NSLog(@"test1 begin – ");
+        muDic[@"key1"] = @"value1";
+        tmpDic = @{@"key23": @"value23"};
         sleep(3);
+//        muDic = [NSMutableDictionary new]; // Variable is not assignable (missing __block type specifier)
+        muDic[@"key2"] = @"value2";
+        tmpDic = @{@"key24": @"value24"};
         NSLog(@"test1 - end - ");
     });
+    tmpDic = @{@"key3": @"value3"};
     dispatch_async(self.concurrentQueue, ^{
         NSLog(@"test2 begin – ");
         sleep(3);
@@ -164,36 +173,36 @@ const NSNotificationName KaiTestNotificationName = @"KaiTestNotification";
     NSLog(@"main ---6—-");
 }
 
-- (void)dispatch_barrier_sync {
-    NSLog(@"lookKai dispatch_barrier_sync");
-    NSLog(@"main ———1—-");
-    dispatch_async(self.concurrentQueue, ^{
-        NSLog(@"test1 begin - ");
-        sleep(3);
-        NSLog(@"test1 - end - ");
-    });
-    dispatch_async(self.concurrentQueue, ^{
-        NSLog(@"test2 begin - ");
-        sleep(3);
-        NSLog(@"test2 – end - ");
-    });
-    dispatch_barrier_async(self.concurrentQueue, ^{///分界线在这里
-        NSLog(@"barrier -- start");
-        sleep(1);
-        NSLog(@"barrier -- end");
-    });
-    dispatch_async(self.concurrentQueue, ^{
-        NSLog(@"test4 begin - ");
-        sleep(3);
-        NSLog(@"test4 – end – ");
-    });
-    dispatch_async(self.concurrentQueue, ^{
-        NSLog(@"test5 begin – ");
-        sleep(3);
-        NSLog(@"test5 - end – ");
-    });
-    NSLog(@"main –——6—-");
-}
+//- (void)dispatch_barrier_sync {
+//    NSLog(@"lookKai dispatch_barrier_sync");
+//    NSLog(@"main ———1—-");
+//    dispatch_async(self.concurrentQueue, ^{
+//        NSLog(@"test1 begin - ");
+//        sleep(3);
+//        NSLog(@"test1 - end - ");
+//    });
+//    dispatch_async(self.concurrentQueue, ^{
+//        NSLog(@"test2 begin - ");
+//        sleep(3);
+//        NSLog(@"test2 – end - ");
+//    });
+//    dispatch_barrier_async(self.concurrentQueue, ^{///分界线在这里
+//        NSLog(@"barrier -- start");
+//        sleep(1);
+//        NSLog(@"barrier -- end");
+//    });
+//    dispatch_async(self.concurrentQueue, ^{
+//        NSLog(@"test4 begin - ");
+//        sleep(3);
+//        NSLog(@"test4 – end – ");
+//    });
+//    dispatch_async(self.concurrentQueue, ^{
+//        NSLog(@"test5 begin – ");
+//        sleep(3);
+//        NSLog(@"test5 - end – ");
+//    });
+//    NSLog(@"main –——6—-");
+//}
 
 - (void)dispatch_group_notify {
 //创建队列组

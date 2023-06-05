@@ -10,7 +10,7 @@
 
 @implementation DemoRuntimeUtils
 
-+ (void)methodSwizzlingWithClass:(Class)cls oriSEL:(SEL)oriSEL swizzledSEL:(SEL)swizzledSEL {
++ (void)methodSwizzlingWithClass3:(Class)cls oriSEL:(SEL)oriSEL swizzledSEL:(SEL)swizzledSEL {
     if (!cls) {
         NSLog(@"传入的交换类不能为空");
     }
@@ -38,7 +38,7 @@
     }
 }
 
-+ (void)methodSwizzlingWithClass2:(Class)cls oriSEL:(SEL)oriSEL swizzledSEL:(SEL)swizzledSEL {
++ (void)methodSwizzlingWithClass:(Class)cls oriSEL:(SEL)oriSEL swizzledSEL:(SEL)swizzledSEL {
     if (!cls) {
         NSLog(@"传入的交换类不能为空");
     }
@@ -53,7 +53,9 @@
      
             父类调用的方法不受影响，是原始的、未修改过的；
      */
+    NSLog(@"lookKai methodSwizzlingWithClass class=%@ class_addMethod=%@", NSStringFromClass(cls), @(success));
     if (success) {
+        // 其实这句即使不要，cls里也有oriSel对应的方法实现了，被add了。 有replaceMethod可以把SwizzeldSel的实现改成原来的
         class_replaceMethod(cls, swizzledSEL, method_getImplementation(oriMethod), method_getTypeEncoding(oriMethod));
     } else {
         method_exchangeImplementations(oriMethod, swiMethod);

@@ -109,13 +109,19 @@
 //    [(__bridge id)pp saySomething]; // 与文章不同，如果使用属性，那么此处crash，不使用属性就正常，毕竟并没有new实例
     
     KaiStudent *student = [KaiStudent new];
+    student.name = @"KaiStudentName";
     [student saySomething];
 //    id pcls2 = student;
 //    void *pp2 = &pcls2;
 //    [(__bridge id)pp2 saySomething];
-    
+    NSLog(@"lookKai will invoke [student personInstanceMethod]");
     [student personInstanceMethod];
+    NSLog(@"lookKai will invoke [student kai_personInstanceMethod]");
+    [student kai_personInstanceMethod];
+    
     KaiPerson *person = [KaiPerson new];
+    person.name = @"KaiPersonName";
+    NSLog(@"lookKai will invoke [person personInstanceMethod]");
     [person personInstanceMethod];
     
     [student otherMethod];

@@ -24,7 +24,7 @@
 }
 
 - (void)otherMethod {
-    NSLog(@"KaiPerson.otherMethod %s", __func__);
+    NSLog(@"KaiPerson.otherMethod %s name=%@", __func__, self.name);
 }
 
 @end
@@ -44,16 +44,19 @@
     });
 }
 
-- (void)personInstanceMethod {
-    NSLog(@"KaiPerson(Demo).personInstanceMethod");
-}
+//- (void)personInstanceMethod {
+//    NSLog(@"KaiStudent(Demo).personInstanceMethod");
+//}
 
 - (void)kai_personInstanceMethod {
-    NSLog(@"KaiPerson(Demo).kai_personInstanceMethod");
+    NSLog(@"KaiStudent(Demo).kai_personInstanceMethod");
+    
+    //被交换后，此处想调用原来的方法得调用自己这个selector，因为这个selector对应的实现IMPL被修改成原来的的
+//    [self kai_personInstanceMethod];
 }
 
 - (void)otherMethod {
-    NSLog(@"KaiPerson(Demo).otherMethod %s", __func__);
+    NSLog(@"KaiStudent(Demo).otherMethod %s name=%@", __func__, self.name);
 }
 
 @end
