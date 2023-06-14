@@ -19,7 +19,7 @@
 }
 
 - (void)saySomething {
-    NSLog(@"KaiPerson.saySomething %s %@", __func__, @"self.name");
+    NSLog(@"KaiPerson.saySomething %s %@", __func__, self.name);
 //    NSLog(@"KaiPerson.saySomething %s %@", __func__, self.name);
 }
 

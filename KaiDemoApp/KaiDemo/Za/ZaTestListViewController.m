@@ -2,6 +2,7 @@
 // Created by KaiKai on 2023/5/3.
 //
 
+#import <objc/runtime.h>
 #import "ZaTestListViewController.h"
 #import "KaiNormalObj.h"
 #import "KaiObjProxy.h"
@@ -26,6 +27,17 @@
     [self addOneTest:@"Long Toast" selector:@selector(testLongToast)];
     [self addOneTest:@"调用Swift语法测试" selector:@selector(invokeSwiftSyntax)];
     [self addOneTest:@"method swizzle" selector:@selector(methodSwizzle)];
+    [self addOneTest:@"global_queue数量" selector:@selector(globalQueueCount)];
+}
+
+- (void)globalQueueCount {
+    dispatch_queue_global_t queue_high1 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
+    dispatch_queue_global_t queue_default = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_queue_global_t queue_low = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0);
+    dispatch_queue_global_t queue_bkg = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
+    dispatch_queue_global_t queue_high2 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
+    NSLog(@"lookKai queue high1=%p high2=%p default=%p low=%p bkg=%p", queue_high1, queue_high2, queue_default, queue_low, queue_bkg);
+    //queue_high1 == queue_high2 4个优先级 4种全局队列
 }
 
 - (void)testToast {
@@ -103,10 +115,13 @@
 }
 
 - (void)methodSwizzle {
-    NSString *tem = @"KaiHaha";
+//    NSString *tem = @"KaiHaha";
+    NSDictionary *testDic = @{@"key1":@"value1"};
+//    NSDictionary *testDic2 = @{@"key2":@"value2"};
+    int _age = 123;
     id pcls = [KaiStudent class];
     void *pp = &pcls;
-//    [(__bridge id)pp saySomething]; // 与文章不同，如果使用属性，那么此处crash，不使用属性就正常，毕竟并没有new实例
+    [(__bridge id)pp saySomething]; // 与文章不同，如果使用属性，那么此处crash，不使用属性就正常，毕竟并没有new实例
     
     KaiStudent *student = [KaiStudent new];
     student.name = @"KaiStudentName";
@@ -126,6 +141,23 @@
     
     [student otherMethod];
     [self callClassMethod:student];
+    
+    int age=10;
+    void (^testBlock)(void) = ^{
+        NSLog(@"age:%d",age); // age:10 应该是创建block时捕获的，而非运行前
+    };
+    age = 20;
+    testBlock();
+    
+    __block int a = 0;
+    NSLog(@"定义前：%p", &a);         //栈区
+    void (^foo)(void) = ^{
+        a = 1;
+        NSLog(@"block内部：%p", &a);    //堆区
+    };
+    NSLog(@"定义后：%p", &a);         //堆区
+    foo();
+    [NSUserDefaults standardUserDefaults];
 }
 
 // 分类重写原类方法时，如何调用原类方法

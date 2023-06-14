@@ -51,6 +51,7 @@
 		2A9A74172A0D199400E9C47A /* SnakeAndLadderGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A74162A0D199400E9C47A /* SnakeAndLadderGame.swift */; };
 		2A9A74192A0D1D4900E9C47A /* ResultBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A74182A0D1D4900E9C47A /* ResultBuilderTest.swift */; };
 		2A9A741B2A0D202B00E9C47A /* TypeSelfTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A741A2A0D202B00E9C47A /* TypeSelfTest.swift */; };
+		2AB943312A398E4B000B64AF /* RegularCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB943302A398E4B000B64AF /* RegularCollectionViewController.swift */; };
 		2AF464E12A02542F00A7441B /* DemoEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF464E02A02542F00A7441B /* DemoEntryViewController.m */; };
 		2AF464E42A02548C00A7441B /* DemoNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF464E32A02548C00A7441B /* DemoNavigationController.m */; };
 /* End PBXBuildFile section */
@@ -145,6 +146,7 @@
 		2A9A74162A0D199400E9C47A /* SnakeAndLadderGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeAndLadderGame.swift; sourceTree = "<group>"; };
 		2A9A74182A0D1D4900E9C47A /* ResultBuilderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBuilderTest.swift; sourceTree = "<group>"; };
 		2A9A741A2A0D202B00E9C47A /* TypeSelfTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSelfTest.swift; sourceTree = "<group>"; };
+		2AB943302A398E4B000B64AF /* RegularCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularCollectionViewController.swift; sourceTree = "<group>"; };
 		2AF464DF2A02542F00A7441B /* DemoEntryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoEntryViewController.h; path = KaiDemo/DemoEntryViewController.h; sourceTree = SOURCE_ROOT; };
 		2AF464E02A02542F00A7441B /* DemoEntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DemoEntryViewController.m; path = KaiDemo/DemoEntryViewController.m; sourceTree = SOURCE_ROOT; };
 		2AF464E22A02548C00A7441B /* DemoNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoNavigationController.h; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 		2A9A73D92A029CC800E9C47A /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				2AB9432F2A39889D000B64AF /* CollectionView */,
 				2A9A73D42A0257B400E9C47A /* AboutViewController.swift */,
 				2A9A74082A0BB0C100E9C47A /* BMICalc.swift */,
 				2A9A74052A0BB00600E9C47A /* BMIViewController.swift */,
@@ -360,6 +363,14 @@
 				2A9A741A2A0D202B00E9C47A /* TypeSelfTest.swift */,
 			);
 			path = SwiftSyntax;
+			sourceTree = "<group>";
+		};
+		2AB9432F2A39889D000B64AF /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				2AB943302A398E4B000B64AF /* RegularCollectionViewController.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,6 +506,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AB943312A398E4B000B64AF /* RegularCollectionViewController.swift in Sources */,
 				2A9A73FC2A07E4E500E9C47A /* DemoJSON.m in Sources */,
 				2A9A73E02A076D1800E9C47A /* GCDTestViewController.m in Sources */,
 				2A9A74112A0BDDA800E9C47A /* ConcurrencyTest.swift in Sources */,
