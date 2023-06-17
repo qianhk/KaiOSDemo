@@ -18,7 +18,9 @@ struct ImageLabelItem {
 }
 
 struct RegularCVConstants {
-    static let column:Int = 3
+    static let sectionVerticalInset = 10
+    static let sectionHoriontalInset = 10
+    static let column: Int = 3
     static let lineSpace = 10
     static let itemSpace = 10
 }
@@ -40,11 +42,12 @@ class RegularCollectionViewController : UIViewController {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .vertical
 //        flowLayout.itemSize = CGSize(width: 200, height: 100)
-//        let margin: CGFloat = 20
-//        let section: CGFloat = 15
 //        flowLayout.minimumLineSpacing = margin
 //        flowLayout.minimumInteritemSpacing = margin
-//        flowLayout.sectionInset = UIEdgeInsets(top: section, left: margin, bottom: section, right: margin)
+        flowLayout.sectionInset = UIEdgeInsets(top: CGFloat(RegularCVConstants.sectionVerticalInset)
+                , left: CGFloat(RegularCVConstants.sectionHoriontalInset)
+                , bottom: CGFloat(RegularCVConstants.sectionVerticalInset)
+                , right: CGFloat(RegularCVConstants.sectionHoriontalInset))
 //        flowLayout.sectionHeadersPinToVisibleBounds = true
 //        flowLayout.sectionFootersPinToVisibleBounds = true
         
@@ -53,14 +56,13 @@ class RegularCollectionViewController : UIViewController {
         collectionView.backgroundColor = .white
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CellID")
         collectionView.register(ImageLabelCell.self, forCellWithReuseIdentifier: "ImageLabelCell")
-//        collectionView.register(BaseHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerView")
-//        collectionView.register(BaseFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "footerView")
+        collectionView.register(BaseHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerView")
+        collectionView.register(BaseFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "footerView")
         
         collectionView.delegate = self
         collectionView.dataSource = self
         view.addSubview(collectionView)
     }
-    
 }
 
 //extension RegularCollectionViewController : UICollectionViewDelegateFlowLayout {
@@ -73,7 +75,9 @@ class RegularCollectionViewController : UIViewController {
 extension RegularCollectionViewController : UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemWidth = (collectionView.bounds.size.width - (CGFloat(RegularCVConstants.column - 1)) * CGFloat(RegularCVConstants.itemSpace)) / CGFloat(RegularCVConstants.column);
+        let itemWidth = (collectionView.bounds.size.width - (CGFloat(RegularCVConstants.column - 1)) * CGFloat(RegularCVConstants.itemSpace)
+                - CGFloat(RegularCVConstants.sectionHoriontalInset) * 2
+        ) / CGFloat(RegularCVConstants.column);
         let intItemWidth = NSInteger(itemWidth)
         return CGSize(width: intItemWidth, height: intItemWidth)
     }
@@ -86,12 +90,10 @@ extension RegularCollectionViewController : UICollectionViewDelegateFlowLayout {
         CGFloat(RegularCVConstants.itemSpace)
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let itemData = dataList[indexPath.row]
         print("collectionView didSelectItem indexPath=\(indexPath) title=\(itemData.label)")
     }
-    
 }
 
 extension RegularCollectionViewController : UICollectionViewDataSource {
@@ -101,7 +103,7 @@ extension RegularCollectionViewController : UICollectionViewDataSource {
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        1
+        5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -115,30 +117,31 @@ extension RegularCollectionViewController : UICollectionViewDataSource {
         cell.textLabel.text = itemData.label;
         return cell;
     }
-    
-    
-    // 返回追加视图对象，供 UICollectionView 加载
-//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//
-//        if kind == UICollectionView.elementKindSectionHeader {
-//            let headerView: BaseHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerView", for: indexPath) as! BaseHeaderView
-//            return headerView
-//        } else if kind == UICollectionView.elementKindSectionFooter {
-//            let footerView: BaseFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "footerView", for: indexPath) as! BaseFooterView
-//            return footerView
-//        }
-//
-//        return UICollectionReusableView()
-//    }
 
-//    // 返回追加视图尺寸
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-//        return CGSize(width: collectionView.frame.size.width, height: 50)
-//    }
-//
-//    // 返回
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-//        return CGSize(width: collectionView.frame.size.width, height: 50)
-//    }
+//     返回追加视图对象，供 UICollectionView 加载
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        if kind == UICollectionView.elementKindSectionHeader {
+            let headerView: BaseHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerView", for: indexPath) as! BaseHeaderView
+            headerView.textLabel.text = "Header_\(indexPath.section)"
+            return headerView
+        } else if kind == UICollectionView.elementKindSectionFooter {
+            let footerView: BaseFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "footerView", for: indexPath) as! BaseFooterView
+            footerView.textLabel.text = "Footer\(indexPath.section)"
+            return footerView
+        }
+        
+        return UICollectionReusableView()
+    }
+    
+    // 返回追加视图尺寸
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.bounds.size.width, height: 50)
+    }
+    
+    // 返回Header尺寸
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.bounds.size.width, height: 50)
+    }
 }
 

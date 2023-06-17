@@ -6,7 +6,7 @@ import UIKit
 
 class BaseHeaderView : UICollectionReusableView {
     
-    private var textLabel: UILabel!
+    var textLabel: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -15,7 +15,7 @@ class BaseHeaderView : UICollectionReusableView {
         textLabel.textAlignment = .center
         textLabel.text = "Header"
         self.addSubview(textLabel)
-        self.backgroundColor = .orange
+        self.backgroundColor = .green
     }
     
     required init?(coder: NSCoder) {

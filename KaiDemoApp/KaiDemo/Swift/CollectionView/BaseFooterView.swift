@@ -6,7 +6,7 @@ import UIKit
 
 class BaseFooterView : UICollectionReusableView {
     
-    private var textLabel: UILabel!
+    var textLabel: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
