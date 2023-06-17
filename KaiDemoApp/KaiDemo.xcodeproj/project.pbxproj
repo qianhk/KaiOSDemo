@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		19DD324285E40DB9BA37BD5D /* NSObject+DemoDelayRunLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DD3483295A2FA7A89D4C72 /* NSObject+DemoDelayRunLoop.m */; };
 		19DD343A9086409294B9C90F /* BaseTestListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DD3A22B4C7F3E1C8179FE8 /* BaseTestListViewController.m */; };
+		19DD345990D44444C314105F /* BaseFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DD375D95AED1C1BF7BF415 /* BaseFooterView.swift */; };
 		19DD367B0620DC30EBAA053F /* NSObject+DemoRuntimeInvoke.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DD3758C7B6CE8F757B4DCD /* NSObject+DemoRuntimeInvoke.m */; };
 		19DD36B6084CE2B29AFA111E /* KaiNormalObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DD33A9D5ECC3F5C8A9043C /* KaiNormalObj.m */; };
+		19DD3999732FCA90EEF3E5F7 /* BaseHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DD35848E565F59590913F4 /* BaseHeaderView.swift */; };
 		19DD3CF6BEF8D1419B9B276D /* ZaTestListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DD3EA777DE4D94367FDCCE /* ZaTestListViewController.m */; };
 		19DD3D285FF5B8495E27640A /* DemoJsConsoleProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DD356E33FC3912CF5AF489 /* DemoJsConsoleProtocol.m */; };
 		19DD3E0F7169E16F6976C045 /* KaiObjProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DD30725BDD0BE8B531743C /* KaiObjProxy.m */; };
+		19DD3F0572BB0431CD9A89F7 /* ImageLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DD355487D74C948F492C0B /* ImageLabelCell.swift */; };
 		2A33203F2A023E3B0001CCA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A33203E2A023E3B0001CCA0 /* AppDelegate.m */; };
 		2A3320422A023E3B0001CCA0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3320412A023E3B0001CCA0 /* SceneDelegate.m */; };
 		2A3320452A023E3B0001CCA0 /* PlaceholderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3320442A023E3B0001CCA0 /* PlaceholderViewController.m */; };
@@ -79,9 +82,12 @@
 		19DD32F871169F94DEBD4755 /* NSObject+DemoDelayRunLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DemoDelayRunLoop.h"; sourceTree = "<group>"; };
 		19DD33A9D5ECC3F5C8A9043C /* KaiNormalObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KaiNormalObj.m; sourceTree = "<group>"; };
 		19DD3483295A2FA7A89D4C72 /* NSObject+DemoDelayRunLoop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DemoDelayRunLoop.m"; sourceTree = "<group>"; };
+		19DD355487D74C948F492C0B /* ImageLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLabelCell.swift; sourceTree = "<group>"; };
 		19DD356E33FC3912CF5AF489 /* DemoJsConsoleProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoJsConsoleProtocol.m; sourceTree = "<group>"; };
+		19DD35848E565F59590913F4 /* BaseHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseHeaderView.swift; sourceTree = "<group>"; };
 		19DD35F8B889B110F8CC3D56 /* KaiNormalObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KaiNormalObj.h; sourceTree = "<group>"; };
 		19DD3758C7B6CE8F757B4DCD /* NSObject+DemoRuntimeInvoke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DemoRuntimeInvoke.m"; sourceTree = "<group>"; };
+		19DD375D95AED1C1BF7BF415 /* BaseFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseFooterView.swift; sourceTree = "<group>"; };
 		19DD38C56BB46EDC1310FA04 /* BaseTestListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTestListViewController.h; sourceTree = "<group>"; };
 		19DD397BD208465F42C35725 /* DemoJsConsoleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoJsConsoleProtocol.h; sourceTree = "<group>"; };
 		19DD3A22B4C7F3E1C8179FE8 /* BaseTestListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTestListViewController.m; sourceTree = "<group>"; };
@@ -369,6 +375,9 @@
 			isa = PBXGroup;
 			children = (
 				2AB943302A398E4B000B64AF /* RegularCollectionViewController.swift */,
+				19DD375D95AED1C1BF7BF415 /* BaseFooterView.swift */,
+				19DD35848E565F59590913F4 /* BaseHeaderView.swift */,
+				19DD355487D74C948F492C0B /* ImageLabelCell.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -545,6 +554,9 @@
 				2A9A73F02A07BDC900E9C47A /* DemoToast.m in Sources */,
 				19DD367B0620DC30EBAA053F /* NSObject+DemoRuntimeInvoke.m in Sources */,
 				2A9A74062A0BB00700E9C47A /* BMIViewController.swift in Sources */,
+				19DD345990D44444C314105F /* BaseFooterView.swift in Sources */,
+				19DD3999732FCA90EEF3E5F7 /* BaseHeaderView.swift in Sources */,
+				19DD3F0572BB0431CD9A89F7 /* ImageLabelCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

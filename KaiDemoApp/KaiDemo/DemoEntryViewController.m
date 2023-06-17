@@ -7,6 +7,7 @@
 
 #import "DemoEntryViewController.h"
 #import "ZaTestListViewController.h"
+#import "KaiDemo-Swift.h"
 
 @interface DemoEntryViewController () {
     
@@ -17,6 +18,8 @@
 @end
 
 @implementation DemoEntryViewController
+
+typedef UIViewController* (^swiftBlock)(void);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,11 +38,14 @@
     tableView.rowHeight = UITableViewAutomaticDimension;
     [tableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"DemoTextTableViewCell"];
     
+    NSString * const swiftPrefix = @"_TtC7KaiDemo17";
+    
     _entryArray = @[
             @{@"Name": @"杂七杂八测试", @"Vc": @"ZaTestListViewController"},
             @{@"Name": @"GCD Test", @"Vc": @"GCDTestViewController"},
             @{@"Name": @"JavaScriptCore", @"Vc": @"JSCoreTestViewController"},
-            @{@"Name": @"BMI Calc", @"Vc": @"_TtC7KaiDemo17BMIViewController"},
+            @{@"Name": @"BMI Calc", @"Vc": [swiftPrefix stringByAppendingString:@"BMIViewController"]},
+            @{@"Name": @"Regular CollectionView", @"block": ^{ return [RegularCollectionViewController new];}},
             @{@"Name": @"Demo Test List5", @"Vc": @"XxxxVC5"},
     ];
     [self performSelector:@selector(autoEnterPage) withObject:nil afterDelay:0.5];
@@ -73,24 +79,35 @@
     NSDictionary *item = _entryArray[indexPath.row];
     NSNumber *type = item[@"type"];
     if (type == nil) {
-        Class clazz = NSClassFromString(item[@"Vc"]);
-        UIViewController *vc = [clazz alloc];
-        if (clazz) {
-            NSString *nib = item[@"Nib"];
-            if (nib) {
-                vc = [vc initWithNibName:nib bundle:nil];
-            } else {
-                vc = [vc init];
+        if (item[@"block"] != nil) {
+            swiftBlock block = item[@"block"];
+            UIViewController *vc = block();
+            if (item[@"Name"] != nil) {
+                vc.title = item[@"Name"];
             }
-            vc.title = item[@"Name"];
             [self.navigationController pushViewController:vc animated:YES];
         } else {
-            NSString *msgStr = [NSString stringWithFormat:@"名字是：%@", item[@"Vc"]];
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示缺失vc" message:msgStr
-                                                                              preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleCancel handler:nil];
-            [alertController addAction:cancelAction];
-            [self presentViewController:alertController animated:YES completion:nil];
+            Class clazz = NSClassFromString(item[@"Vc"]);
+            UIViewController *vc = [clazz alloc];
+            if (clazz) {
+                NSString *nib = item[@"Nib"];
+                if (nib) {
+                    vc = [vc initWithNibName:nib bundle:nil];
+                } else {
+                    vc = [vc init];
+                }
+                if (item[@"Name"] != nil) {
+                    vc.title = item[@"Name"];
+                }
+                [self.navigationController pushViewController:vc animated:YES];
+            } else {
+                NSString *msgStr = [NSString stringWithFormat:@"名字是：%@", item[@"Vc"]];
+                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示缺失vc" message:msgStr
+                                                                                  preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleCancel handler:nil];
+                [alertController addAction:cancelAction];
+                [self presentViewController:alertController animated:YES completion:nil];
+            }
         }
     } else {
         int intType = [type intValue];
