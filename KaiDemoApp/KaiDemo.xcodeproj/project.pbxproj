@@ -55,6 +55,8 @@
 		2A9A74192A0D1D4900E9C47A /* ResultBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A74182A0D1D4900E9C47A /* ResultBuilderTest.swift */; };
 		2A9A741B2A0D202B00E9C47A /* TypeSelfTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A741A2A0D202B00E9C47A /* TypeSelfTest.swift */; };
 		2AB943312A398E4B000B64AF /* RegularCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB943302A398E4B000B64AF /* RegularCollectionViewController.swift */; };
+		2AB943332A3DBA6D000B64AF /* WaterCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB943322A3DBA6D000B64AF /* WaterCollectionView.swift */; };
+		2AB943352A3DBB0F000B64AF /* WaterFallFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB943342A3DBB0F000B64AF /* WaterFallFlowLayout.swift */; };
 		2AF464E12A02542F00A7441B /* DemoEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF464E02A02542F00A7441B /* DemoEntryViewController.m */; };
 		2AF464E42A02548C00A7441B /* DemoNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF464E32A02548C00A7441B /* DemoNavigationController.m */; };
 /* End PBXBuildFile section */
@@ -153,6 +155,8 @@
 		2A9A74182A0D1D4900E9C47A /* ResultBuilderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBuilderTest.swift; sourceTree = "<group>"; };
 		2A9A741A2A0D202B00E9C47A /* TypeSelfTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSelfTest.swift; sourceTree = "<group>"; };
 		2AB943302A398E4B000B64AF /* RegularCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularCollectionViewController.swift; sourceTree = "<group>"; };
+		2AB943322A3DBA6D000B64AF /* WaterCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterCollectionView.swift; sourceTree = "<group>"; };
+		2AB943342A3DBB0F000B64AF /* WaterFallFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallFlowLayout.swift; sourceTree = "<group>"; };
 		2AF464DF2A02542F00A7441B /* DemoEntryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoEntryViewController.h; path = KaiDemo/DemoEntryViewController.h; sourceTree = SOURCE_ROOT; };
 		2AF464E02A02542F00A7441B /* DemoEntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DemoEntryViewController.m; path = KaiDemo/DemoEntryViewController.m; sourceTree = SOURCE_ROOT; };
 		2AF464E22A02548C00A7441B /* DemoNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoNavigationController.h; sourceTree = "<group>"; };
@@ -378,6 +382,8 @@
 				19DD375D95AED1C1BF7BF415 /* BaseFooterView.swift */,
 				19DD35848E565F59590913F4 /* BaseHeaderView.swift */,
 				19DD355487D74C948F492C0B /* ImageLabelCell.swift */,
+				2AB943322A3DBA6D000B64AF /* WaterCollectionView.swift */,
+				2AB943342A3DBB0F000B64AF /* WaterFallFlowLayout.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -520,6 +526,7 @@
 				2A9A73E02A076D1800E9C47A /* GCDTestViewController.m in Sources */,
 				2A9A74112A0BDDA800E9C47A /* ConcurrencyTest.swift in Sources */,
 				2AF464E42A02548C00A7441B /* DemoNavigationController.m in Sources */,
+				2AB943352A3DBB0F000B64AF /* WaterFallFlowLayout.swift in Sources */,
 				2AF464E12A02542F00A7441B /* DemoEntryViewController.m in Sources */,
 				2A3320452A023E3B0001CCA0 /* PlaceholderViewController.m in Sources */,
 				2A9A74172A0D199400E9C47A /* SnakeAndLadderGame.swift in Sources */,
@@ -553,6 +560,7 @@
 				2A9A74092A0BB0C100E9C47A /* BMICalc.swift in Sources */,
 				2A9A73F02A07BDC900E9C47A /* DemoToast.m in Sources */,
 				19DD367B0620DC30EBAA053F /* NSObject+DemoRuntimeInvoke.m in Sources */,
+				2AB943332A3DBA6D000B64AF /* WaterCollectionView.swift in Sources */,
 				2A9A74062A0BB00700E9C47A /* BMIViewController.swift in Sources */,
 				19DD345990D44444C314105F /* BaseFooterView.swift in Sources */,
 				19DD3999732FCA90EEF3E5F7 /* BaseHeaderView.swift in Sources */,

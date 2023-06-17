@@ -78,7 +78,13 @@ extension RegularCollectionViewController : UICollectionViewDelegateFlowLayout {
         let itemWidth = (collectionView.bounds.size.width - (CGFloat(RegularCVConstants.column - 1)) * CGFloat(RegularCVConstants.itemSpace)
                 - CGFloat(RegularCVConstants.sectionHoriontalInset) * 2
         ) / CGFloat(RegularCVConstants.column);
-        let intItemWidth = NSInteger(itemWidth)
+        var intItemWidth = NSInteger(itemWidth)
+        if (indexPath.row % 2 == 0) {
+            intItemWidth /= 2
+        }
+//        if (indexPath.item < 3) {
+//            intItemWidth = intItemWidth / 3 * 2
+//        }
         return CGSize(width: intItemWidth, height: intItemWidth)
     }
     

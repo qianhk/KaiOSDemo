@@ -46,6 +46,7 @@ typedef UIViewController* (^swiftBlock)(void);
             @{@"Name": @"JavaScriptCore", @"Vc": @"JSCoreTestViewController"},
             @{@"Name": @"BMI Calc", @"Vc": [swiftPrefix stringByAppendingString:@"BMIViewController"]},
             @{@"Name": @"Regular CollectionView", @"block": ^{ return [RegularCollectionViewController new];}},
+            @{@"Name": @"Water CollectionView", @"block": ^{ return [WaterCollectionViewController new];}},
             @{@"Name": @"Demo Test List5", @"Vc": @"XxxxVC5"},
     ];
     [self performSelector:@selector(autoEnterPage) withObject:nil afterDelay:0.5];
