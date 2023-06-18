@@ -38,5 +38,6 @@ class ControlFlowEntry : NSObject {
         SnakeAndLadderGame.entry()
         ResultBuilderTest.entry()
         TypeSelfTest.entry()
+        JsonTest.entry()
     }
 }

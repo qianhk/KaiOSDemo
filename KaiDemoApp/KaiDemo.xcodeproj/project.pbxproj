@@ -63,6 +63,7 @@
 		2AB9433D2A3EC0D0000B64AF /* BookShelf.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB9433C2A3EC0D0000B64AF /* BookShelf.xcassets */; };
 		2AB9433F2A3ECAA4000B64AF /* BookShelfDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB9433E2A3ECAA4000B64AF /* BookShelfDecorationView.swift */; };
 		2AB943412A3EF2B5000B64AF /* SwiftDemoEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB943402A3EF2B5000B64AF /* SwiftDemoEntryViewController.swift */; };
+		2AB943442A3F19BC000B64AF /* JsonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB943432A3F19BC000B64AF /* JsonTest.swift */; };
 		2AF464E12A02542F00A7441B /* DemoEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF464E02A02542F00A7441B /* DemoEntryViewController.m */; };
 		2AF464E42A02548C00A7441B /* DemoNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF464E32A02548C00A7441B /* DemoNavigationController.m */; };
 /* End PBXBuildFile section */
@@ -169,6 +170,7 @@
 		2AB9433C2A3EC0D0000B64AF /* BookShelf.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = BookShelf.xcassets; sourceTree = "<group>"; };
 		2AB9433E2A3ECAA4000B64AF /* BookShelfDecorationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookShelfDecorationView.swift; sourceTree = "<group>"; };
 		2AB943402A3EF2B5000B64AF /* SwiftDemoEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDemoEntryViewController.swift; sourceTree = "<group>"; };
+		2AB943432A3F19BC000B64AF /* JsonTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonTest.swift; sourceTree = "<group>"; };
 		2AF464DF2A02542F00A7441B /* DemoEntryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoEntryViewController.h; path = KaiDemo/DemoEntryViewController.h; sourceTree = SOURCE_ROOT; };
 		2AF464E02A02542F00A7441B /* DemoEntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DemoEntryViewController.m; path = KaiDemo/DemoEntryViewController.m; sourceTree = SOURCE_ROOT; };
 		2AF464E22A02548C00A7441B /* DemoNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoNavigationController.h; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 		2A9A74072A0BB07E00E9C47A /* SwiftSyntax */ = {
 			isa = PBXGroup;
 			children = (
+				2AB943422A3F19AD000B64AF /* Json */,
 				2A9A74032A0A8C5A00E9C47A /* TestSwiftSyntax.swift */,
 				2A9A74142A0D11C200E9C47A /* ControlFlowEntry.swift */,
 				2A9A740A2A0BD3CC00E9C47A /* IntExtension.swift */,
@@ -404,6 +407,14 @@
 				2AB943362A3EBE78000B64AF /* DecorationCollectionViewController.swift */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		2AB943422A3F19AD000B64AF /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				2AB943432A3F19BC000B64AF /* JsonTest.swift */,
+			);
+			path = Json;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -575,6 +586,7 @@
 				19DD3E0F7169E16F6976C045 /* KaiObjProxy.m in Sources */,
 				19DD36B6084CE2B29AFA111E /* KaiNormalObj.m in Sources */,
 				19DD3D285FF5B8495E27640A /* DemoJsConsoleProtocol.m in Sources */,
+				2AB943442A3F19BC000B64AF /* JsonTest.swift in Sources */,
 				2A9A74022A0A8B1200E9C47A /* OCTestData.m in Sources */,
 				2A9A740F2A0BD69700E9C47A /* GenericsTest.swift in Sources */,
 				2AB9433B2A3EC028000B64AF /* BookCoverCell.swift in Sources */,
