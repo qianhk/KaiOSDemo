@@ -25,7 +25,7 @@ typedef UIViewController *(^swiftBlock)(void);
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    self.title = @"凯Demo";
+//    self.title = @"凯Demo"; // 在这儿会覆盖底部tabbar上的名称
     
     self.clearsSelectionOnViewWillAppear = NO;
     
@@ -45,24 +45,24 @@ typedef UIViewController *(^swiftBlock)(void);
             @{@"Name": @"GCD Test", @"Vc": @"GCDTestViewController"},
             @{@"Name": @"JavaScriptCore", @"Vc": @"JSCoreTestViewController"},
             @{@"Name": @"BMI Calc", @"Vc": [swiftPrefix stringByAppendingString:@"BMIViewController"]},
-            @{@"Name": @"Regular CollectionView", @"block": ^{
-                return [RegularCollectionViewController new];
-            }},
-            @{@"Name": @"Water CollectionView", @"block": ^{
-                return [WaterCollectionViewController new];
-            }},
-            @{@"Name": @"Decoration CollectionView", @"block": ^{
-                return [DecorationCollectionViewController new];
-            }},
+//            @{@"Name": @"Regular CollectionView", @"block": ^{
+//                return [RegularCollectionViewController new];
+//            }},
+//            @{@"Name": @"Water CollectionView", @"block": ^{
+//                return [WaterCollectionViewController new];
+//            }},
+//            @{@"Name": @"Decoration CollectionView", @"block": ^{
+//                return [DecorationCollectionViewController new];
+//            }},
             @{@"Name": @"Demo Test List5", @"Vc": @"XxxxVC5"},
     ];
-    [self performSelector:@selector(autoEnterPage) withObject:nil afterDelay:0.5];
+//    [self performSelector:@selector(autoEnterPage) withObject:nil afterDelay:0.5];
     
 }
 
 - (void)autoEnterPage {
     const NSInteger rowIndex = 1;
-//    [self tableView:self.tableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:rowIndex inSection:0]];
+    [self tableView:self.tableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:rowIndex inSection:0]];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

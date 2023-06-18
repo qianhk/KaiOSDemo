@@ -7,7 +7,6 @@
 
 import UIKit
 
-@objc
 class DecorationCollectionViewController : UIViewController {
     
     private var collectionView: UICollectionView!

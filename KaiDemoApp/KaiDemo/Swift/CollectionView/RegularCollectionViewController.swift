@@ -25,7 +25,6 @@ struct RegularCVConstants {
     static let itemSpace = 10
 }
 
-@objc
 class RegularCollectionViewController : UIViewController {
     private var collectionView: UICollectionView!
     private var dataList: [ImageLabelItem]!
@@ -79,9 +78,9 @@ extension RegularCollectionViewController : UICollectionViewDelegateFlowLayout {
                 - CGFloat(RegularCVConstants.sectionHoriontalInset) * 2
         ) / CGFloat(RegularCVConstants.column);
         var intItemWidth = NSInteger(itemWidth)
-        if (indexPath.row % 2 == 0) {
-            intItemWidth /= 2
-        }
+//        if (indexPath.row % 2 == 0) {
+//            intItemWidth /= 2
+//        }
 //        if (indexPath.item < 3) {
 //            intItemWidth = intItemWidth / 3 * 2
 //        }

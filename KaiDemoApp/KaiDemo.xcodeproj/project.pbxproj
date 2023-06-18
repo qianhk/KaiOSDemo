@@ -62,6 +62,7 @@
 		2AB9433B2A3EC028000B64AF /* BookCoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB9433A2A3EC028000B64AF /* BookCoverCell.swift */; };
 		2AB9433D2A3EC0D0000B64AF /* BookShelf.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB9433C2A3EC0D0000B64AF /* BookShelf.xcassets */; };
 		2AB9433F2A3ECAA4000B64AF /* BookShelfDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB9433E2A3ECAA4000B64AF /* BookShelfDecorationView.swift */; };
+		2AB943412A3EF2B5000B64AF /* SwiftDemoEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB943402A3EF2B5000B64AF /* SwiftDemoEntryViewController.swift */; };
 		2AF464E12A02542F00A7441B /* DemoEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF464E02A02542F00A7441B /* DemoEntryViewController.m */; };
 		2AF464E42A02548C00A7441B /* DemoNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF464E32A02548C00A7441B /* DemoNavigationController.m */; };
 /* End PBXBuildFile section */
@@ -167,6 +168,7 @@
 		2AB9433A2A3EC028000B64AF /* BookCoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCoverCell.swift; sourceTree = "<group>"; };
 		2AB9433C2A3EC0D0000B64AF /* BookShelf.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = BookShelf.xcassets; sourceTree = "<group>"; };
 		2AB9433E2A3ECAA4000B64AF /* BookShelfDecorationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookShelfDecorationView.swift; sourceTree = "<group>"; };
+		2AB943402A3EF2B5000B64AF /* SwiftDemoEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDemoEntryViewController.swift; sourceTree = "<group>"; };
 		2AF464DF2A02542F00A7441B /* DemoEntryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoEntryViewController.h; path = KaiDemo/DemoEntryViewController.h; sourceTree = SOURCE_ROOT; };
 		2AF464E02A02542F00A7441B /* DemoEntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DemoEntryViewController.m; path = KaiDemo/DemoEntryViewController.m; sourceTree = SOURCE_ROOT; };
 		2AF464E22A02548C00A7441B /* DemoNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoNavigationController.h; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				2A9A73D92A029CC800E9C47A /* Swift */,
 				2A9A74072A0BB07E00E9C47A /* SwiftSyntax */,
 				2A9A73D82A0295B900E9C47A /* Za */,
+				2AB943402A3EF2B5000B64AF /* SwiftDemoEntryViewController.swift */,
 				2AF464DF2A02542F00A7441B /* DemoEntryViewController.h */,
 				2AF464E02A02542F00A7441B /* DemoEntryViewController.m */,
 				2A3320752A02410A0001CCA0 /* Resources */,
@@ -583,6 +586,7 @@
 				2AB943332A3DBA6D000B64AF /* WaterCollectionViewController.swift in Sources */,
 				2A9A74062A0BB00700E9C47A /* BMIViewController.swift in Sources */,
 				19DD345990D44444C314105F /* BaseFooterView.swift in Sources */,
+				2AB943412A3EF2B5000B64AF /* SwiftDemoEntryViewController.swift in Sources */,
 				19DD3999732FCA90EEF3E5F7 /* BaseHeaderView.swift in Sources */,
 				19DD3F0572BB0431CD9A89F7 /* ImageLabelCell.swift in Sources */,
 			);

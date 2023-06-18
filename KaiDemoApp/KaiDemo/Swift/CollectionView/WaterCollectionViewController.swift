@@ -7,7 +7,6 @@
 
 import UIKit
 
-@objc
 class WaterCollectionViewController : UIViewController {
     private var collectionView: UICollectionView!
     private var dataList: [ImageLabelItem]!
