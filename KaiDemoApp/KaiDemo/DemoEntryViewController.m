@@ -19,7 +19,7 @@
 
 @implementation DemoEntryViewController
 
-typedef UIViewController* (^swiftBlock)(void);
+typedef UIViewController *(^swiftBlock)(void);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,15 +38,22 @@ typedef UIViewController* (^swiftBlock)(void);
     tableView.rowHeight = UITableViewAutomaticDimension;
     [tableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"DemoTextTableViewCell"];
     
-    NSString * const swiftPrefix = @"_TtC7KaiDemo17";
+    NSString *const swiftPrefix = @"_TtC7KaiDemo17";
     
     _entryArray = @[
             @{@"Name": @"杂七杂八测试", @"Vc": @"ZaTestListViewController"},
             @{@"Name": @"GCD Test", @"Vc": @"GCDTestViewController"},
             @{@"Name": @"JavaScriptCore", @"Vc": @"JSCoreTestViewController"},
             @{@"Name": @"BMI Calc", @"Vc": [swiftPrefix stringByAppendingString:@"BMIViewController"]},
-            @{@"Name": @"Regular CollectionView", @"block": ^{ return [RegularCollectionViewController new];}},
-            @{@"Name": @"Water CollectionView", @"block": ^{ return [WaterCollectionViewController new];}},
+            @{@"Name": @"Regular CollectionView", @"block": ^{
+                return [RegularCollectionViewController new];
+            }},
+            @{@"Name": @"Water CollectionView", @"block": ^{
+                return [WaterCollectionViewController new];
+            }},
+            @{@"Name": @"Decoration CollectionView", @"block": ^{
+                return [DecorationCollectionViewController new];
+            }},
             @{@"Name": @"Demo Test List5", @"Vc": @"XxxxVC5"},
     ];
     [self performSelector:@selector(autoEnterPage) withObject:nil afterDelay:0.5];
@@ -76,7 +83,7 @@ typedef UIViewController* (^swiftBlock)(void);
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 //    NSLog(@"didSelectRowAtIndexPath row=%ld %.2f", (long) indexPath.row, UITableViewAutomaticDimension);
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-
+    
     NSDictionary *item = _entryArray[indexPath.row];
     NSNumber *type = item[@"type"];
     if (type == nil) {
