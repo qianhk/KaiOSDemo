@@ -31,13 +31,31 @@
 }
 
 - (void)globalQueueCount {
-    dispatch_queue_global_t queue_high1 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
-    dispatch_queue_global_t queue_default = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_queue_global_t queue_low = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0);
-    dispatch_queue_global_t queue_bkg = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
+    dispatch_queue_global_t queue_high1 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0); // 2
+    dispatch_queue_global_t queue_default = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0); // 0
+    dispatch_queue_global_t queue_low = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0); // -2
+    dispatch_queue_global_t queue_bkg = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0); // INT16_MIN
     dispatch_queue_global_t queue_high2 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
-    NSLog(@"lookKai queue high1=%p high2=%p default=%p low=%p bkg=%p", queue_high1, queue_high2, queue_default, queue_low, queue_bkg);
+    NSLog(@"lookKai priority queue high1=%p high2=%p default=%p low=%p bkg=%p", queue_high1, queue_high2, queue_default, queue_low, queue_bkg);
     //queue_high1 == queue_high2 4个优先级 4种全局队列
+    
+    dispatch_queue_global_t queue_qos_user_interactive = dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0); // 0x21
+    dispatch_queue_global_t queue_qos_user_initiated = dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0); // 0x19
+    dispatch_queue_global_t queue_qos_default = dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0); // 0x15
+    dispatch_queue_global_t queue_qos_utility = dispatch_get_global_queue(QOS_CLASS_UTILITY, 0); // 0x11
+    dispatch_queue_global_t queue_qos_bkg = dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0);  // 0x9
+    dispatch_queue_global_t queue_qos_unspecified = dispatch_get_global_queue(QOS_CLASS_UNSPECIFIED, 0); // 0x0
+    NSLog(@"lookKai qos queue userInteractive=%p userInitiated=%p default=%p utility=%p bkg=%p unspecified=%p"
+          , queue_qos_user_interactive, queue_qos_user_initiated, queue_qos_default, queue_qos_utility, queue_qos_bkg, queue_qos_unspecified);
+    // 6个参数，由于unspecified队列等于default队列，共5种队列
+    
+    // 相同的队列，映射关系
+    // DISPATCH_QUEUE_PRIORITY_HIGH == QOS_CLASS_USER_INITIATED
+    // DISPATCH_QUEUE_PRIORITY_DEFAULT == QOS_CLASS_DEFAULT == QOS_CLASS_UNSPECIFIED
+    // DISPATCH_QUEUE_PRIORITY_LOW == QOS_CLASS_UTILITY
+    // DISPATCH_QUEUE_PRIORITY_BACKGROUND == QOS_CLASS_BACKGROUND
+    
+    // 综合下来，排除重复的，共可以创建5种系统全局队列
 }
 
 - (void)testToast {
