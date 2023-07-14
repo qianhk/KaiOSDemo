@@ -39,5 +39,6 @@ class ControlFlowEntry : NSObject {
         ResultBuilderTest.entry()
         TypeSelfTest.entry()
         JsonTest.entry()
+        AdvancedOperatorTest.entry()
     }
 }

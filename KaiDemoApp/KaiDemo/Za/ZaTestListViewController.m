@@ -68,6 +68,7 @@
     Demo_onMainThread(^{
         [DemoToast toast:@"Haha Default Toast"];
     });
+    
 }
 
 - (void)testLongToast {

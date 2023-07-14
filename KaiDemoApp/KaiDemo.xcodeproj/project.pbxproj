@@ -12,6 +12,7 @@
 		19DD345990D44444C314105F /* BaseFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DD375D95AED1C1BF7BF415 /* BaseFooterView.swift */; };
 		19DD367B0620DC30EBAA053F /* NSObject+DemoRuntimeInvoke.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DD3758C7B6CE8F757B4DCD /* NSObject+DemoRuntimeInvoke.m */; };
 		19DD36B6084CE2B29AFA111E /* KaiNormalObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DD33A9D5ECC3F5C8A9043C /* KaiNormalObj.m */; };
+		19DD37ED750529622365CF3F /* AdvancedOperatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DD366739C759781BFA7CC1 /* AdvancedOperatorTest.swift */; };
 		19DD3999732FCA90EEF3E5F7 /* BaseHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DD35848E565F59590913F4 /* BaseHeaderView.swift */; };
 		19DD3CF6BEF8D1419B9B276D /* ZaTestListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DD3EA777DE4D94367FDCCE /* ZaTestListViewController.m */; };
 		19DD3D285FF5B8495E27640A /* DemoJsConsoleProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DD356E33FC3912CF5AF489 /* DemoJsConsoleProtocol.m */; };
@@ -95,6 +96,7 @@
 		19DD356E33FC3912CF5AF489 /* DemoJsConsoleProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoJsConsoleProtocol.m; sourceTree = "<group>"; };
 		19DD35848E565F59590913F4 /* BaseHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseHeaderView.swift; sourceTree = "<group>"; };
 		19DD35F8B889B110F8CC3D56 /* KaiNormalObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KaiNormalObj.h; sourceTree = "<group>"; };
+		19DD366739C759781BFA7CC1 /* AdvancedOperatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedOperatorTest.swift; sourceTree = "<group>"; };
 		19DD3758C7B6CE8F757B4DCD /* NSObject+DemoRuntimeInvoke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DemoRuntimeInvoke.m"; sourceTree = "<group>"; };
 		19DD375D95AED1C1BF7BF415 /* BaseFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseFooterView.swift; sourceTree = "<group>"; };
 		19DD38C56BB46EDC1310FA04 /* BaseTestListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTestListViewController.h; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 				2A9A74162A0D199400E9C47A /* SnakeAndLadderGame.swift */,
 				2A9A74182A0D1D4900E9C47A /* ResultBuilderTest.swift */,
 				2A9A741A2A0D202B00E9C47A /* TypeSelfTest.swift */,
+				19DD366739C759781BFA7CC1 /* AdvancedOperatorTest.swift */,
 			);
 			path = SwiftSyntax;
 			sourceTree = "<group>";
@@ -601,6 +604,7 @@
 				2AB943412A3EF2B5000B64AF /* SwiftDemoEntryViewController.swift in Sources */,
 				19DD3999732FCA90EEF3E5F7 /* BaseHeaderView.swift in Sources */,
 				19DD3F0572BB0431CD9A89F7 /* ImageLabelCell.swift in Sources */,
+				19DD37ED750529622365CF3F /* AdvancedOperatorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
