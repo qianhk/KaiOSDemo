@@ -105,6 +105,7 @@
 		19DD3EA777DE4D94367FDCCE /* ZaTestListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZaTestListViewController.m; sourceTree = "<group>"; };
 		19DD3F1D32FB5682EEBE0198 /* ZaTestListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZaTestListViewController.h; sourceTree = "<group>"; };
 		19DD3F57A2E67AC16CBB97C2 /* KaiObjProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KaiObjProxy.h; sourceTree = "<group>"; };
+		2A0F07FF2A9CFFAA00F6ECC9 /* KaiDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KaiDemo.entitlements; sourceTree = "<group>"; };
 		2A33203A2A023E3B0001CCA0 /* KaiDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaiDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A33203D2A023E3B0001CCA0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2A33203E2A023E3B0001CCA0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -227,6 +228,7 @@
 		2A33203C2A023E3B0001CCA0 /* KaiDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2A0F07FF2A9CFFAA00F6ECC9 /* KaiDemo.entitlements */,
 				2A9A73E12A07A74D00E9C47A /* JSCore */,
 				2A9A73DA2A076CB100E9C47A /* GCD */,
 				2A9A73D92A029CC800E9C47A /* Swift */,
@@ -776,9 +778,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = KaiDemo/KaiDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 10001;
-				DEVELOPMENT_TEAM = A27YPEY3N3;
+				DEVELOPMENT_TEAM = P8232VD523;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KaiDemo/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -791,9 +794,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.2;
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = njnu.kai.KaiDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "KaiDemo/App/KaiDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -808,9 +815,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = KaiDemo/KaiDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 10001;
-				DEVELOPMENT_TEAM = A27YPEY3N3;
+				DEVELOPMENT_TEAM = P8232VD523;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KaiDemo/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -823,9 +831,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.2;
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = njnu.kai.KaiDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "KaiDemo/App/KaiDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

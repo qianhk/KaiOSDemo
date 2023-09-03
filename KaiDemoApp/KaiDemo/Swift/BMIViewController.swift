@@ -8,6 +8,7 @@
 import UIKit
 
 // 此类被编译成了_TtC7KaiDemo17BMIViewController
+@objc(OcBMIViewController)
 @available(macCatalyst 13.1, *)
 class BMIViewController : UIViewController {
     private var weightEdt: UITextField?

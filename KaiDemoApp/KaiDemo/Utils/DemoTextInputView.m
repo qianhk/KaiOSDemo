@@ -51,9 +51,9 @@
     }
     self.inputTextField.secureTextEntry = NO;
     [self.inputTextField becomeFirstResponder];
-#if TARGET_OS_MACCATALYST
-    [self keyboardwillShow:nil];
-#endif
+//#if TARGET_OS_MACCATALYST
+//    [self keyboardwillShow:nil];
+//#endif
 }
 
 - (void)dismissKeyboard {

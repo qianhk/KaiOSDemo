@@ -26,6 +26,7 @@ public class TestSwiftSyntax : NSObject {
         self.index = 0
         name = "defaultName"
         age = 0
+        super.init()
     }
     
     deinit {

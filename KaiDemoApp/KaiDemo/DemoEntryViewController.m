@@ -38,13 +38,11 @@ typedef UIViewController *(^swiftBlock)(void);
     tableView.rowHeight = UITableViewAutomaticDimension;
     [tableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"DemoTextTableViewCell"];
     
-    NSString *const swiftPrefix = @"_TtC7KaiDemo17";
-    
     _entryArray = @[
             @{@"Name": @"杂七杂八测试", @"Vc": @"ZaTestListViewController"},
             @{@"Name": @"GCD Test", @"Vc": @"GCDTestViewController"},
             @{@"Name": @"JavaScriptCore", @"Vc": @"JSCoreTestViewController"},
-            @{@"Name": @"BMI Calc", @"Vc": [swiftPrefix stringByAppendingString:@"BMIViewController"]},
+            @{@"Name": @"BMI Calc", @"Vc": @"OcBMIViewController"},
 //            @{@"Name": @"Regular CollectionView", @"block": ^{
 //                return [RegularCollectionViewController new];
 //            }},
