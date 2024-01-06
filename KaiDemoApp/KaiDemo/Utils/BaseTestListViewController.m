@@ -65,7 +65,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     NSDictionary *item = _entryArray[indexPath.row];
-    [self performSelector:NSSelectorFromString(item[@"selector"]) withObject:item[@"argument"] afterDelay:8];
+    [self performSelector:NSSelectorFromString(item[@"selector"]) withObject:item[@"argument"] afterDelay:0];
 //    NSLog(@"lookKai didSelectRowAtIndexPath row=%ld %.2f", (long) indexPath.row, UITableViewAutomaticDimension);
 }
 
