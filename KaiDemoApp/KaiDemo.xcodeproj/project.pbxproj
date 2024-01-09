@@ -67,6 +67,7 @@
 		2AB943442A3F19BC000B64AF /* JsonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB943432A3F19BC000B64AF /* JsonTest.swift */; };
 		2AF464E12A02542F00A7441B /* DemoEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF464E02A02542F00A7441B /* DemoEntryViewController.m */; };
 		2AF464E42A02548C00A7441B /* DemoNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF464E32A02548C00A7441B /* DemoNavigationController.m */; };
+		5F2C9622A22978F44071D724 /* libPods-KaiDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5BA245D970045C9ED02608 /* libPods-KaiDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B5BA245D970045C9ED02608 /* libPods-KaiDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KaiDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19DD30725BDD0BE8B531743C /* KaiObjProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KaiObjProxy.m; sourceTree = "<group>"; };
 		19DD30BEA377EC391ECB8A3C /* NSObject+DemoRuntimeInvoke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DemoRuntimeInvoke.h"; sourceTree = "<group>"; };
 		19DD32F871169F94DEBD4755 /* NSObject+DemoDelayRunLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DemoDelayRunLoop.h"; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		19DD38C56BB46EDC1310FA04 /* BaseTestListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTestListViewController.h; sourceTree = "<group>"; };
 		19DD397BD208465F42C35725 /* DemoJsConsoleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoJsConsoleProtocol.h; sourceTree = "<group>"; };
 		19DD3A22B4C7F3E1C8179FE8 /* BaseTestListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTestListViewController.m; sourceTree = "<group>"; };
+		19DD3C92310FF2B553D0E107 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		19DD3EA777DE4D94367FDCCE /* ZaTestListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZaTestListViewController.m; sourceTree = "<group>"; };
 		19DD3F1D32FB5682EEBE0198 /* ZaTestListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZaTestListViewController.h; sourceTree = "<group>"; };
 		19DD3F57A2E67AC16CBB97C2 /* KaiObjProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KaiObjProxy.h; sourceTree = "<group>"; };
@@ -178,6 +181,8 @@
 		2AF464E02A02542F00A7441B /* DemoEntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DemoEntryViewController.m; path = KaiDemo/DemoEntryViewController.m; sourceTree = SOURCE_ROOT; };
 		2AF464E22A02548C00A7441B /* DemoNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoNavigationController.h; sourceTree = "<group>"; };
 		2AF464E32A02548C00A7441B /* DemoNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoNavigationController.m; sourceTree = "<group>"; };
+		7FCDC4E47518629974DC7BC6 /* Pods-KaiDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaiDemo.debug.xcconfig"; path = "Target Support Files/Pods-KaiDemo/Pods-KaiDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		E095416F686DCF34263C1DC2 /* Pods-KaiDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaiDemo.release.xcconfig"; path = "Target Support Files/Pods-KaiDemo/Pods-KaiDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F2C9622A22978F44071D724 /* libPods-KaiDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +211,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01A1CB6470F67F86A39A1BB3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7FCDC4E47518629974DC7BC6 /* Pods-KaiDemo.debug.xcconfig */,
+				E095416F686DCF34263C1DC2 /* Pods-KaiDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		2A3320312A023E3B0001CCA0 = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +227,9 @@
 				2A3320582A023E3D0001CCA0 /* KaiDemoTests */,
 				2A3320622A023E3D0001CCA0 /* KaiDemoUITests */,
 				2A33203B2A023E3B0001CCA0 /* Products */,
+				19DD3C92310FF2B553D0E107 /* Podfile */,
+				01A1CB6470F67F86A39A1BB3 /* Pods */,
+				AEB2748E4D2A1FD58DBD2917 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -422,6 +440,14 @@
 			path = Json;
 			sourceTree = "<group>";
 		};
+		AEB2748E4D2A1FD58DBD2917 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B5BA245D970045C9ED02608 /* libPods-KaiDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -429,6 +455,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A3320692A023E3D0001CCA0 /* Build configuration list for PBXNativeTarget "KaiDemo" */;
 			buildPhases = (
+				AF9B9590EF1CAAC486D9C6DF /* [CP] Check Pods Manifest.lock */,
 				2A3320362A023E3B0001CCA0 /* Sources */,
 				2A3320372A023E3B0001CCA0 /* Frameworks */,
 				2A3320382A023E3B0001CCA0 /* Resources */,
@@ -550,6 +577,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AF9B9590EF1CAAC486D9C6DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KaiDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2A3320362A023E3B0001CCA0 /* Sources */ = {
@@ -774,6 +826,7 @@
 		};
 		2A33206A2A023E3D0001CCA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FCDC4E47518629974DC7BC6 /* Pods-KaiDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -781,7 +834,7 @@
 				CODE_SIGN_ENTITLEMENTS = KaiDemo/KaiDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 10001;
-				DEVELOPMENT_TEAM = P8232VD523;
+				DEVELOPMENT_TEAM = A27YPEY3N3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KaiDemo/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -811,6 +864,7 @@
 		};
 		2A33206B2A023E3D0001CCA0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E095416F686DCF34263C1DC2 /* Pods-KaiDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -818,7 +872,7 @@
 				CODE_SIGN_ENTITLEMENTS = KaiDemo/KaiDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 10001;
-				DEVELOPMENT_TEAM = P8232VD523;
+				DEVELOPMENT_TEAM = A27YPEY3N3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KaiDemo/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
