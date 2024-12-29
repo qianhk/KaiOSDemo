@@ -65,6 +65,7 @@
 		2AB9433F2A3ECAA4000B64AF /* BookShelfDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB9433E2A3ECAA4000B64AF /* BookShelfDecorationView.swift */; };
 		2AB943412A3EF2B5000B64AF /* SwiftDemoEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB943402A3EF2B5000B64AF /* SwiftDemoEntryViewController.swift */; };
 		2AB943442A3F19BC000B64AF /* JsonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB943432A3F19BC000B64AF /* JsonTest.swift */; };
+		2AC131BC2D215FEF003CFB58 /* libroot.dylib in Resources */ = {isa = PBXBuildFile; fileRef = 2AC131B82D215F90003CFB58 /* libroot.dylib */; };
 		2AF464E12A02542F00A7441B /* DemoEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF464E02A02542F00A7441B /* DemoEntryViewController.m */; };
 		2AF464E42A02548C00A7441B /* DemoNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF464E32A02548C00A7441B /* DemoNavigationController.m */; };
 		5F2C9622A22978F44071D724 /* libPods-KaiDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5BA245D970045C9ED02608 /* libPods-KaiDemo.a */; };
@@ -177,6 +178,7 @@
 		2AB9433E2A3ECAA4000B64AF /* BookShelfDecorationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookShelfDecorationView.swift; sourceTree = "<group>"; };
 		2AB943402A3EF2B5000B64AF /* SwiftDemoEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDemoEntryViewController.swift; sourceTree = "<group>"; };
 		2AB943432A3F19BC000B64AF /* JsonTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonTest.swift; sourceTree = "<group>"; };
+		2AC131B82D215F90003CFB58 /* libroot.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libroot.dylib; sourceTree = "<group>"; };
 		2AF464DF2A02542F00A7441B /* DemoEntryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoEntryViewController.h; path = KaiDemo/DemoEntryViewController.h; sourceTree = SOURCE_ROOT; };
 		2AF464E02A02542F00A7441B /* DemoEntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DemoEntryViewController.m; path = KaiDemo/DemoEntryViewController.m; sourceTree = SOURCE_ROOT; };
 		2AF464E22A02548C00A7441B /* DemoNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoNavigationController.h; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 		2A3320752A02410A0001CCA0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2AC131B82D215F90003CFB58 /* libroot.dylib */,
 				2A9A73D62A026DD800E9C47A /* DemoLaunchBkg.jpg */,
 				2A3320492A023E3C0001CCA0 /* MainAssets.xcassets */,
 				2AB9433C2A3EC0D0000B64AF /* BookShelf.xcassets */,
@@ -553,6 +556,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AC131BC2D215FEF003CFB58 /* libroot.dylib in Resources */,
 				2A33204D2A023E3C0001CCA0 /* LaunchScreen.storyboard in Resources */,
 				2A33204A2A023E3C0001CCA0 /* MainAssets.xcassets in Resources */,
 				2A3320482A023E3B0001CCA0 /* Main.storyboard in Resources */,
@@ -837,6 +841,7 @@
 				DEVELOPMENT_TEAM = A27YPEY3N3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KaiDemo/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = KaiDemo2;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -846,6 +851,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KaiDemo/Resources",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.2;
 				MARKETING_VERSION = 1.0.1;
@@ -875,6 +884,7 @@
 				DEVELOPMENT_TEAM = A27YPEY3N3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KaiDemo/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = KaiDemo2;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -884,6 +894,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KaiDemo/Resources",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.2;
 				MARKETING_VERSION = 1.0.1;

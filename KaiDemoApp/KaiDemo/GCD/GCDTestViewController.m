@@ -6,6 +6,7 @@
 //
 
 #import "GCDTestViewController.h"
+#include <dlfcn.h>
 
 const NSNotificationName KaiTestNotificationName = @"KaiTestNotification";
 
@@ -41,6 +42,7 @@ const NSNotificationName KaiTestNotificationName = @"KaiTestNotification";
     [self addOneTest:@"has NSLock/RecursiveLock 卖票" selector:@selector(sellTicketEntry:) withObject:@(YES)];
     [self addOneTest:@"NSNotificationQueue YES" selector:@selector(notificationQueueEntry:) withObject:@(YES)];
     [self addOneTest:@"NSNotificationQueue NO" selector:@selector(notificationQueueEntry:) withObject:@(NO)];
+    [self addOneTest:@"Test libroot" selector:@selector(testLibRoot)];
 }
 
 - (void)dealloc {
@@ -49,6 +51,56 @@ const NSNotificationName KaiTestNotificationName = @"KaiTestNotification";
 
 - (void)receivedNotification:(NSNotification *)notify {
     NSLog(@"lookKaiNotify receivedNotification: %@", [NSThread currentThread]);
+}
+
+static const char *(*dyn_get_root_prefix)(void) = NULL;
+static const char *(*dyn_get_jbroot_prefix)(void) = NULL;
+static const char *(*dyn_get_boot_uuid)(void) = NULL;
+
+- (void)testLibRoot {
+
+    NSFileManager *fileMgr = NSFileManager.defaultManager;
+    BOOL exist = [fileMgr fileExistsAtPath:@"/var/jb/usr/lib/libroot.dylib"];
+    NSLog(@"lookKai /var/jb/usr/lib/libroot.dylib exists=%d", exist);
+//    void *handle = dlopen("/var/jb/usr/lib/libroot.dylib", RTLD_NOW);
+//    void *handle = dlopen("@rpath/libroot.dylib", RTLD_NOW);
+    void *handle = dlopen("@executable_path/libroot.dylib", RTLD_NOW);
+    if (handle) {
+        // 为越狱或非无根越狱似乎都dlopen失败,即使是自己app内部的这个libroot.dylib
+        NSLog(@"lookKai testLibRoot dlopen success");
+//        dyn_get_root_prefix   = dlsym(handle, "libroot_get_root_prefix");
+//        NSLog(@"lookKai testLibRoot dlopen dlsym 01");
+        dyn_get_jbroot_prefix = dlsym(handle, "libroot_get_jbroot_prefix");
+        NSLog(@"lookKai testLibRoot dlopen dlsym funAddr=%p", dyn_get_jbroot_prefix);
+//        dyn_get_boot_uuid     = dlsym(handle, "libroot_get_boot_uuid");
+//        NSLog(@"lookKai testLibRoot dlopen dlsym 01");
+//        dyn_jbrootpath        = dlsym(handle, "libroot_jbrootpath");
+//        dyn_rootfspath        = dlsym(handle, "libroot_rootfspath");
+        if (dyn_get_jbroot_prefix != NULL) {
+            const char * jbrootPrefix = dyn_get_jbroot_prefix();
+            NSLog(@"lookKai testLibRoot got Handle jbRoot=%s", jbrootPrefix);
+            if (jbrootPrefix != NULL) {
+                NSString *procursusPath = [NSString stringWithUTF8String:jbrootPrefix];
+                // 2024-12-29 18:56:03.474952+0800 KaiDemo[70921:8553869] [Shadow] isPathRestricted: restricted path: /private/preboot/1B19D757CC1D3114D9D7FEAFC6C696A56DC894660EBAE25CA2D4CE136CE5EA5E8A9AFC38BEB4145DB39B14F1DBF0636C/dopamine-8YlLgj/procursus
+                // 有个Shadow的log输出，获取？
+                procursusPath = [procursusPath stringByAppendingString:@"/bin/zsh"];
+                BOOL procursusDirExist = [fileMgr fileExistsAtPath:procursusPath];
+                NSLog(@"lookKai procursusDirExist=%d", procursusDirExist);
+            }
+        }
+        dlclose(handle);
+        handle = NULL;
+    } else {
+        NSLog(@"lookKai testLibRoot no Handle");
+    }
+    
+    handle = dlopen("/usr/lib/libobjc.A.dylib", RTLD_NOW);
+    if (handle) {
+        NSLog(@"lookKai libobjc.dylib ok");
+        dlclose(handle);
+    } else {
+        NSLog(@"lookKai libobjc.dylib no Handle");
+    }
 }
 
 - (void)notificationQueueEntry:(NSNumber *)useQueue {

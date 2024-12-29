@@ -15,6 +15,7 @@
 #import "DemoTextInputView.h"
 #import "KaiDemo-Swift.h"
 #import "KaiPerson.h"
+#import "JSCoreTestViewController.h"
 
 @implementation ZaTestListViewController
 
@@ -28,6 +29,7 @@
     [self addOneTest:@"调用Swift语法测试" selector:@selector(invokeSwiftSyntax)];
     [self addOneTest:@"method swizzle" selector:@selector(methodSwizzle)];
     [self addOneTest:@"global_queue数量" selector:@selector(globalQueueCount)];
+    [self addOneTest:@"open new vc" selector:@selector(openNewVc)];
 }
 
 - (void)globalQueueCount {
@@ -200,6 +202,21 @@
     SEL sel = method_getName(methods[index]);
     IMP imp = method_getImplementation(methods[index]);
     ((void (*)(id, SEL))imp)(student,sel);
+}
+
+- (void)openNewVc {
+    UIViewController *vc = [JSCoreTestViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSLog(@"lookKai testVC viewDidAppear");
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    NSLog(@"lookKai testVC viewWillDisappear");
 }
 
 

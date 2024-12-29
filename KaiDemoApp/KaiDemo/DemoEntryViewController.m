@@ -30,6 +30,7 @@ typedef UIViewController *(^swiftBlock)(void);
     self.clearsSelectionOnViewWillAppear = NO;
     
     UITableView *const tableView = self.tableView;
+//    [tableView setHidden:NO];
     tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     tableView.separatorColor = [UIColor orangeColor];
     tableView.separatorInset = UIEdgeInsetsZero;
